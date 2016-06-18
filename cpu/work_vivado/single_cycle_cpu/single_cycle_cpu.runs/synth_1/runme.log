@@ -1,0 +1,531 @@
+
+*** Running vivado
+    with args -log single_cycle_cpu.vds -m64 -mode batch -messageDb vivado.pb -notrace -source single_cycle_cpu.tcl
+
+
+****** Vivado v2015.2 (64-bit)
+  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source single_cycle_cpu.tcl -notrace
+Command: synth_design -top single_cycle_cpu -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 950.660 ; gain = 136.520 ; free physical = 3411 ; free virtual = 12268
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'single_cycle_cpu' [/home/phil/cpu_entwurf/cpu/single_cycle_cpu.vhd:13]
+INFO: [Synth 8-638] synthesizing module 'fetch' [/home/phil/cpu_entwurf/cpu/fetch.vhd:18]
+INFO: [Synth 8-638] synthesizing module 'pc' [/home/phil/cpu_entwurf/program_counter/pc.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'pc' (1#1) [/home/phil/cpu_entwurf/program_counter/pc.vhd:16]
+INFO: [Synth 8-638] synthesizing module 'instr_mem' [/home/phil/cpu_entwurf/daten_instruktionsspeicher/instr_mem.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'instr_mem' (2#1) [/home/phil/cpu_entwurf/daten_instruktionsspeicher/instr_mem.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'fetch' (3#1) [/home/phil/cpu_entwurf/cpu/fetch.vhd:18]
+INFO: [Synth 8-638] synthesizing module 'instruction_decode' [/home/phil/cpu_entwurf/cpu/instruction_decode.vhd:26]
+INFO: [Synth 8-638] synthesizing module 'regfile' [/home/phil/cpu_entwurf/register_file/regfile.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'regfile' (4#1) [/home/phil/cpu_entwurf/register_file/regfile.vhd:19]
+INFO: [Synth 8-638] synthesizing module 'decoder' [/home/phil/cpu_entwurf/decoder/decoder.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'decoder' (5#1) [/home/phil/cpu_entwurf/decoder/decoder.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'instruction_decode' (6#1) [/home/phil/cpu_entwurf/cpu/instruction_decode.vhd:26]
+INFO: [Synth 8-638] synthesizing module 'execute' [/home/phil/cpu_entwurf/cpu/execute.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'alu' [/home/phil/cpu_entwurf/alu/alu.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'alu' (7#1) [/home/phil/cpu_entwurf/alu/alu.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'execute' (8#1) [/home/phil/cpu_entwurf/cpu/execute.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'memory_access' [/home/phil/cpu_entwurf/cpu/memory_access.vhd:30]
+INFO: [Synth 8-638] synthesizing module 'data_mem' [/home/phil/cpu_entwurf/daten_instruktionsspeicher/data_mem.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'data_mem' (9#1) [/home/phil/cpu_entwurf/daten_instruktionsspeicher/data_mem.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'memory_access' (10#1) [/home/phil/cpu_entwurf/cpu/memory_access.vhd:30]
+INFO: [Synth 8-256] done synthesizing module 'single_cycle_cpu' (11#1) [/home/phil/cpu_entwurf/cpu/single_cycle_cpu.vhd:13]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 985.941 ; gain = 171.801 ; free physical = 3373 ; free virtual = 12231
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 985.941 ; gain = 171.801 ; free physical = 3373 ; free virtual = 12231
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 993.945 ; gain = 179.805 ; free physical = 3373 ; free virtual = 12231
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "rom" won't be mapped to RAM because it is too sparse
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Synth 8-5546] ROM "regbank_reg[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regbank_reg[1]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regbank_reg[2]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regbank_reg[3]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regbank_reg[4]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regbank_reg[5]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regbank_reg[6]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regbank_reg[7]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regbank_reg[8]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regbank_reg[9]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regbank_reg[10]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regbank_reg[11]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regbank_reg[12]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regbank_reg[13]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regbank_reg[14]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regbank_reg[15]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regbank_reg[16]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regbank_reg[17]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regbank_reg[18]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regbank_reg[19]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regbank_reg[20]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regbank_reg[21]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regbank_reg[22]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regbank_reg[23]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regbank_reg[24]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regbank_reg[25]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regbank_reg[26]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regbank_reg[27]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regbank_reg[28]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regbank_reg[29]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regbank_reg[30]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regbank_reg[31]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "RegDst" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Jump" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Branch" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MemtoReg" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MemWrite" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ALUSrc" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "RegWrite" won't be mapped to RAM because it is too sparse
+ROM size is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-3537] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the inputs of the operator [/home/phil/cpu_entwurf/alu/alu.vhd:24]
+INFO: [Synth 8-5545] ROM "zero" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5562] The signal ram_reg is implemented as block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The *depth (5 address bits)* is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 1009.961 ; gain = 195.820 ; free physical = 3357 ; free virtual = 12215
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 34    
++---RAMs : 
+	             1024 Bit         RAMs := 1     
++---Muxes : 
+	  33 Input     32 Bit        Muxes := 1     
+	   8 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 36    
+	   3 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module pc 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module instr_mem 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	  33 Input     32 Bit        Muxes := 1     
+Module regfile 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 32    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 32    
+Module decoder 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 2     
+Module instruction_decode 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 1     
+Module alu 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Muxes : 
+	   8 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module execute 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module data_mem 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---RAMs : 
+	             1024 Bit         RAMs := 1     
+Module memory_access 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1111.281 ; gain = 297.141 ; free physical = 3252 ; free virtual = 12110
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "i_decode/decode_0/RegDst" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i_decode/decode_0/Jump" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i_decode/decode_0/Branch" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i_decode/decode_0/MemtoReg" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i_decode/decode_0/MemWrite" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "i_execute/alu_0/zero" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:19 . Memory (MB): peak = 1113.297 ; gain = 299.156 ; free physical = 3249 ; free virtual = 12107
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:20 ; elapsed = 00:00:19 . Memory (MB): peak = 1113.297 ; gain = 299.156 ; free physical = 3249 ; free virtual = 12107
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+INFO: [Synth 8-5562] The signal i_memory_access_and_write_back/data_mem_0/ram_reg is implemented as block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The *depth (5 address bits)* is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM:
++-----------------+---------------------------------------------------+------------------------+---+---+------------------------+---+---+---------+--------+--------+----------------------------+
+|Module Name      | RTL Object                                        | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | OUT_REG | RAMB18 | RAMB36 | Hierarchical Name          | 
++-----------------+---------------------------------------------------+------------------------+---+---+------------------------+---+---+---------+--------+--------+----------------------------+
+|single_cycle_cpu | i_memory_access_and_write_back/data_mem_0/ram_reg | 32 x 32                | W | R |                        |   |   | Port A  | 1      | 0      | single_cycle_cpu/extram__2 | 
++-----------------+---------------------------------------------------+------------------------+---+---+------------------------+---+---+---------+--------+--------+----------------------------+
+
+Note: The table shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. "Hierarchical Name" reflects the Block RAM name as it appears in the hierarchical module and only part of it is displayed.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_fetch/instr_mem_0/data_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_fetch/instr_mem_0/data_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_fetch/instr_mem_0/data_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_fetch/instr_mem_0/data_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_fetch/instr_mem_0/data_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_fetch/instr_mem_0/data_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_fetch/instr_mem_0/data_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_fetch/instr_mem_0/data_reg[26] )
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[3][31] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[3][30] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[3][29] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[3][28] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[3][27] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[3][26] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[3][25] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[3][24] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[3][23] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[3][22] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[3][21] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[3][20] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[3][19] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[3][18] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[3][17] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[3][16] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[3][15] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[3][14] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[3][13] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[3][12] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[3][11] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[3][10] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[3][9] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[3][8] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[3][7] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[3][6] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[3][5] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[3][4] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[3][3] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[3][2] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[3][1] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[3][0] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[4][31] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[4][30] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[4][29] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[4][28] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[4][27] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[4][26] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[4][25] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[4][24] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[4][23] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[4][22] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[4][21] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[4][20] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[4][19] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[4][18] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[4][17] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[4][16] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[4][15] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[4][14] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[4][13] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[4][12] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[4][11] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[4][10] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[4][9] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[4][8] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[4][7] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[4][6] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[4][5] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[4][4] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[4][3] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[4][2] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[4][1] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[4][0] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[5][31] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[5][30] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[5][29] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[5][28] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[5][27] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[5][26] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[5][25] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[5][24] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[5][23] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[5][22] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[5][21] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[5][20] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[5][19] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[5][18] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[5][17] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[5][16] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[5][15] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[5][14] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[5][13] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[5][12] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[5][11] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[5][10] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[5][9] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[5][8] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[5][7] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[5][6] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[5][5] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[5][4] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[5][3] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[5][2] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[5][1] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[5][0] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[6][31] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[6][30] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[6][29] ) is unused and will be removed from module single_cycle_cpu.
+WARNING: [Synth 8-3332] Sequential element (\i_decode/regfile_0/regbank_reg[6][28] ) is unused and will be removed from module single_cycle_cpu.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_decode/regfile_0/regbank_reg[2][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_decode/regfile_0/regbank_reg[1][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_decode/regfile_0/regbank_reg[1][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_decode/regfile_0/regbank_reg[1][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_decode/regfile_0/regbank_reg[1][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_decode/regfile_0/regbank_reg[8][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_decode/regfile_0/regbank_reg[8][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_decode/regfile_0/regbank_reg[8][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_decode/regfile_0/regbank_reg[8][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_decode/regfile_0/regbank_reg[1][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_decode/regfile_0/regbank_reg[1][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_decode/regfile_0/regbank_reg[1][11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_decode/regfile_0/regbank_reg[1][12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_decode/regfile_0/regbank_reg[1][13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_decode/regfile_0/regbank_reg[1][14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_decode/regfile_0/regbank_reg[1][15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_decode/regfile_0/regbank_reg[8][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_decode/regfile_0/regbank_reg[8][17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_decode/regfile_0/regbank_reg[8][18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_decode/regfile_0/regbank_reg[8][19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_decode/regfile_0/regbank_reg[8][20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_decode/regfile_0/regbank_reg[8][21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_decode/regfile_0/regbank_reg[8][22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_decode/regfile_0/regbank_reg[8][23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_decode/regfile_0/regbank_reg[8][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_decode/regfile_0/regbank_reg[8][25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_decode/regfile_0/regbank_reg[8][26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_decode/regfile_0/regbank_reg[8][27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_decode/regfile_0/regbank_reg[8][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_decode/regfile_0/regbank_reg[8][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_decode/regfile_0/regbank_reg[8][30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_decode/regfile_0/regbank_reg[8][31] )
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1171.344 ; gain = 357.203 ; free physical = 3187 ; free virtual = 12047
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1171.344 ; gain = 357.203 ; free physical = 3187 ; free virtual = 12047
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1171.344 ; gain = 357.203 ; free physical = 3187 ; free virtual = 12047
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1171.344 ; gain = 357.203 ; free physical = 3187 ; free virtual = 12047
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance \i_memory_access_and_write_back/data_mem_0/ram_reg  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance \i_memory_access_and_write_back/data_mem_0/ram_reg  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 1171.344 ; gain = 357.203 ; free physical = 3187 ; free virtual = 12047
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1171.344 ; gain = 357.203 ; free physical = 3186 ; free virtual = 12046
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1171.344 ; gain = 357.203 ; free physical = 3186 ; free virtual = 12046
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1171.344 ; gain = 357.203 ; free physical = 3186 ; free virtual = 12046
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1171.344 ; gain = 357.203 ; free physical = 3186 ; free virtual = 12046
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1171.344 ; gain = 357.203 ; free physical = 3186 ; free virtual = 12046
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |     4|
+|3     |LUT1     |     4|
+|4     |LUT2     |     2|
+|5     |LUT3     |     3|
+|6     |LUT4     |    70|
+|7     |LUT5     |    34|
+|8     |LUT6     |    49|
+|9     |RAMB18E1 |     1|
+|10    |FDCE     |    69|
+|11    |FDRE     |    12|
+|12    |IBUF     |     2|
+|13    |OBUF     |    32|
++------+---------+------+
+
+Report Instance Areas: 
++------+---------------------------------+-------------------+------+
+|      |Instance                         |Module             |Cells |
++------+---------------------------------+-------------------+------+
+|1     |top                              |                   |   283|
+|2     |  i_decode                       |instruction_decode |    89|
+|3     |    regfile_0                    |regfile            |    89|
+|4     |  i_execute                      |execute            |    10|
+|5     |    alu_0                        |alu                |    10|
+|6     |  i_fetch                        |fetch              |   148|
+|7     |    instr_mem_0                  |instr_mem          |   125|
+|8     |    pc_0                         |pc                 |    23|
+|9     |  i_memory_access_and_write_back |memory_access      |     1|
+|10    |    data_mem_0                   |data_mem           |     1|
++------+---------------------------------+-------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:28 . Memory (MB): peak = 1171.344 ; gain = 357.203 ; free physical = 3186 ; free virtual = 12046
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1007 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1171.344 ; gain = 240.684 ; free physical = 3186 ; free virtual = 12046
+Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:28 . Memory (MB): peak = 1171.344 ; gain = 357.203 ; free physical = 3186 ; free virtual = 12046
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+124 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1245.355 ; gain = 322.699 ; free physical = 3135 ; free virtual = 11995
+report_utilization: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.16 . Memory (MB): peak = 1277.371 ; gain = 0.000 ; free physical = 3134 ; free virtual = 11994
+INFO: [Common 17-206] Exiting Vivado at Sat Jun 18 13:38:06 2016...

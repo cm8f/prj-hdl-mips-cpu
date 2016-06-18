@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Sat Jun 18 13:36:35 2016
+# Process ID: 12967
+# Log file: /home/phil/cpu_entwurf/cpu/work_vivado/single_cycle_cpu/vivado.log
+# Journal file: /home/phil/cpu_entwurf/cpu/work_vivado/single_cycle_cpu/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project single_cycle_cpu.xpr
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
