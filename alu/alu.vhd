@@ -34,7 +34,7 @@ with opcode select slv_o <=
 lessthan <= slv_lt;
 o <= slv_o;
 
-with slv_o select zero <= '1' when (others => '0'),
+with slv_o select zero <= '1' when std_logic_vector(to_unsigned(0, 32)),
 									'0' when others;
 
 process(a,b,opcode)
