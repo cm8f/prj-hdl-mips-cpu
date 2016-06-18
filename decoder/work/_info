@@ -1,0 +1,102 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/yn38iluz/Documents/decoder
+T_opt
+!s110 1464615162
+V385C;0:0R7iJk8c73?G`B2
+04 10 9 work tb_decoder testbench 1
+=1-00199963af52-574c40f9-76f18-7793
+o-quiet -auto_acc_if_foreign -work work
+n@_opt
+OL;O;10.4;61
+R0
+Edecoder
+Z1 w1464615116
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8decoder.vhd
+Z6 Fdecoder.vhd
+l0
+L7
+Vm=I]LnVn_iQHdLcOKH`B32
+!s100 2DFjAZgDROHW^L3B70TC61
+Z7 OL;C;10.4;61
+31
+Z8 !s110 1464616072
+!i10b 1
+Z9 !s108 1464616072.477098
+Z10 !s90 -reportprogress|300|-93|-explicit|decoder.vhd|
+Z11 !s107 decoder.vhd|
+!i113 0
+Z12 o-93 -explicit
+Z13 tExplicit 1
+Abehavioral
+R2
+R3
+R4
+Z14 DEx4 work 7 decoder 0 22 m=I]LnVn_iQHdLcOKH`B32
+31
+R8
+l29
+L22
+VYlfBNfIA0C@bM?=X8O2nB3
+!s100 ViChZ9keOU0?dFELd<TiW2
+R7
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+R13
+Etb_decoder
+Z15 w1464616063
+R2
+R3
+R4
+R0
+Z16 8tb_decoder.vhd
+Z17 Ftb_decoder.vhd
+l0
+L5
+V;Jz7P2gR:WH[2<7AgNMoY2
+!s100 VoRPi4fSHP9Qd::37l1D60
+R7
+31
+R8
+!i10b 1
+Z18 !s108 1464616072.528013
+Z19 !s90 -reportprogress|300|-93|-explicit|tb_decoder.vhd|
+Z20 !s107 tb_decoder.vhd|
+!i113 0
+R12
+R13
+Atestbench
+R14
+R2
+R3
+R4
+DEx4 work 10 tb_decoder 0 22 ;Jz7P2gR:WH[2<7AgNMoY2
+31
+R8
+l24
+L8
+Vif10hR6LXT[777aO?ISH23
+!s100 KL=Tkb2bH92h]Pbc87N_Y0
+R7
+!i10b 1
+R18
+R19
+R20
+!i113 0
+R12
+R13
