@@ -1,0 +1,19 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity execute is
+	port(
+		pc_in 		: in std_logic_vector(31 downto 0);
+		rd_data0		: in std_logic_vector(31 downto 0);
+		rd_data1		: in std_logic_vector(31 downto 0);
+		sign_extend	: in std_logic_vector(31 downto 0);
+		-- control
+		branch		: out std_logic;
+		jump			: out std_logic;
+		memtoreg		: out std_logic;
+		alucntrl		: out std_logic_vector(3 downto 0);
+		memwrite		: out std_logic;
+		alusrc		: out std_logic
+	);
+end entity execute;

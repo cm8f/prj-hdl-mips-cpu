@@ -1,0 +1,18 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity single_cycle_cpu is
+port(
+	clk 			: in std_logic;
+	reset			: in std_logic
+);
+end entity single_cycle_cpu;
+
+architecture structural of single_cycle_cpu is
+
+begin
+
+
+
+end architecture structural;

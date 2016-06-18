@@ -1,0 +1,21 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity memory_access is
+	port(
+		clk 		: in std_logic;
+		reset		: in std_logic;
+		pc_in 	: in std_logic_vector(31 downto 0);
+		pc_calc	: in std_logic_vector(31 downto 0);
+		-- from alu
+		zero		: in std_logic;
+		lt 		: in std_logic;
+		alu_res	: in std_logic_vector(31 downto 0);
+		-- from control
+		branch	: in std_logic;
+		jump		: in std_logic;
+		memtoreg	: in std_logic;
+		memwrite	: in std_logic;
+	);
+end entity memory_access;

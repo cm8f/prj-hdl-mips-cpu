@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="single_cycle">
+		<CBX_INST_ENTRY INSTANCE_NAME="|single_cycle_cpu|fetch:i_fetch|instr_mem:instr_mem_0|altsyncram:rom_rtl_0" CBX_FILE_NAME="altsyncram_4l71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|single_cycle_cpu|memory_access:i_memory_access_and_write_back|data_mem:data_mem_0|altsyncram:ram_rtl_0" CBX_FILE_NAME="altsyncram_21j1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
