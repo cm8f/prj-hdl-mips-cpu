@@ -1,0 +1,612 @@
+# do do_sim.tcl
+# ../..
+# ../../program_counter
+# ../../register_file
+# ../../daten_instruktionsspeicher
+# ../../alu
+# ../../decoder
+# ../../cpu
+# work
+# ** Warning: (vlib-34) Library already exists at "work".
+# -93 -explicit -work work
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:04:18 on Jun 18,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../program_counter/pc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pc
+# -- Compiling architecture behavioral of pc
+# End time: 16:04:18 on Jun 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:04:18 on Jun 18,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../register_file/regfile.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity regfile
+# -- Compiling architecture behavioral of regfile
+# End time: 16:04:19 on Jun 18,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:04:19 on Jun 18,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../daten_instruktionsspeicher/mem_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package mem_pkg
+# End time: 16:04:19 on Jun 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:04:19 on Jun 18,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../daten_instruktionsspeicher/data_mem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mem_pkg
+# -- Compiling entity data_mem
+# -- Compiling architecture behavioral of data_mem
+# End time: 16:04:19 on Jun 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:04:19 on Jun 18,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../daten_instruktionsspeicher/instr_mem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mem_pkg
+# -- Compiling entity instr_mem
+# -- Compiling architecture behavioral of instr_mem
+# End time: 16:04:19 on Jun 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:04:19 on Jun 18,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../alu/alu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity alu
+# -- Compiling architecture behavioral of alu
+# ** Warning: ../../alu/alu.vhd(37): (vcom-1563) Choice in selected signal assignment must be locally static.
+# End time: 16:04:19 on Jun 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:04:19 on Jun 18,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../decoder/decoder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity decoder
+# -- Compiling architecture behavioral of decoder
+# End time: 16:04:19 on Jun 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:04:19 on Jun 18,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../cpu/fetch.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mem_pkg
+# -- Compiling entity fetch
+# -- Compiling architecture structural of fetch
+# -- Loading entity pc
+# -- Loading entity instr_mem
+# End time: 16:04:19 on Jun 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:04:19 on Jun 18,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../cpu/instruction_decode.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity instruction_decode
+# -- Compiling architecture structural of instruction_decode
+# -- Loading entity regfile
+# -- Loading entity decoder
+# End time: 16:04:19 on Jun 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:04:19 on Jun 18,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../cpu/execute.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity execute
+# -- Compiling architecture mixed of execute
+# -- Loading entity alu
+# End time: 16:04:19 on Jun 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:04:20 on Jun 18,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../cpu/memory_access.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mem_pkg
+# -- Compiling entity memory_access
+# -- Compiling architecture mixed of memory_access
+# -- Loading entity data_mem
+# End time: 16:04:20 on Jun 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:04:20 on Jun 18,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../cpu/single_cycle_cpu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity single_cycle_cpu
+# -- Compiling architecture structural of single_cycle_cpu
+# -- Loading package mem_pkg
+# -- Loading entity fetch
+# -- Loading entity instruction_decode
+# -- Loading entity execute
+# -- Loading entity memory_access
+# End time: 16:04:20 on Jun 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:04:20 on Jun 18,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../cpu/tb_single_cycle_cpu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_single_cycle_cpu
+# -- Compiling architecture testbench of tb_single_cycle_cpu
+# -- Loading entity single_cycle_cpu
+# End time: 16:04:20 on Jun 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.tb_single_cycle_cpu 
+# Start time: 16:04:20 on Jun 18,2016
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_single_cycle_cpu(testbench)
+# Loading work.mem_pkg
+# Loading work.single_cycle_cpu(structural)
+# Loading work.fetch(structural)
+# Loading work.pc(behavioral)
+# Loading work.instr_mem(behavioral)
+# Loading work.instruction_decode(structural)
+# Loading work.regfile(behavioral)
+# Loading work.decoder(behavioral)
+# Loading work.execute(mixed)
+# Loading work.alu(behavioral)
+# Loading work.memory_access(mixed)
+# Loading work.data_mem(behavioral)
+# sim:/tb_single_cycle_cpu/dut
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_single_cycle_cpu/dut/i_decode/regfile_0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_single_cycle_cpu/dut/i_decode/regfile_0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /tb_single_cycle_cpu/dut/i_decode/regfile_0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /tb_single_cycle_cpu/dut/i_decode/regfile_0
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+do do_sim.tcl
+# ../..
+# ../../program_counter
+# ../../register_file
+# ../../daten_instruktionsspeicher
+# ../../alu
+# ../../decoder
+# ../../cpu
+# work
+# ** Warning: (vlib-34) Library already exists at "work".
+# -93 -explicit -work work
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:37:59 on Jun 18,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../program_counter/pc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pc
+# -- Compiling architecture behavioral of pc
+# End time: 16:38:00 on Jun 18,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:38:00 on Jun 18,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../register_file/regfile.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity regfile
+# -- Compiling architecture behavioral of regfile
+# End time: 16:38:00 on Jun 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:38:00 on Jun 18,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../daten_instruktionsspeicher/mem_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package mem_pkg
+# End time: 16:38:00 on Jun 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:38:00 on Jun 18,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../daten_instruktionsspeicher/data_mem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mem_pkg
+# -- Compiling entity data_mem
+# -- Compiling architecture behavioral of data_mem
+# End time: 16:38:00 on Jun 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:38:00 on Jun 18,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../daten_instruktionsspeicher/instr_mem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mem_pkg
+# -- Compiling entity instr_mem
+# -- Compiling architecture behavioral of instr_mem
+# End time: 16:38:00 on Jun 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:38:01 on Jun 18,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../alu/alu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity alu
+# -- Compiling architecture behavioral of alu
+# ** Warning: ../../alu/alu.vhd(37): (vcom-1563) Choice in selected signal assignment must be locally static.
+# End time: 16:38:01 on Jun 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:38:01 on Jun 18,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../decoder/decoder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity decoder
+# -- Compiling architecture behavioral of decoder
+# End time: 16:38:01 on Jun 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:38:01 on Jun 18,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../cpu/fetch.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mem_pkg
+# -- Compiling entity fetch
+# -- Compiling architecture structural of fetch
+# -- Loading entity pc
+# -- Loading entity instr_mem
+# End time: 16:38:01 on Jun 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:38:01 on Jun 18,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../cpu/instruction_decode.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity instruction_decode
+# -- Compiling architecture structural of instruction_decode
+# -- Loading entity regfile
+# -- Loading entity decoder
+# End time: 16:38:01 on Jun 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:38:02 on Jun 18,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../cpu/execute.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity execute
+# -- Compiling architecture mixed of execute
+# -- Loading entity alu
+# End time: 16:38:02 on Jun 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:38:02 on Jun 18,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../cpu/memory_access.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mem_pkg
+# -- Compiling entity memory_access
+# -- Compiling architecture mixed of memory_access
+# -- Loading entity data_mem
+# End time: 16:38:02 on Jun 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:38:02 on Jun 18,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../cpu/single_cycle_cpu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity single_cycle_cpu
+# -- Compiling architecture structural of single_cycle_cpu
+# -- Loading package mem_pkg
+# -- Loading entity fetch
+# -- Loading entity instruction_decode
+# -- Loading entity execute
+# -- Loading entity memory_access
+# End time: 16:38:02 on Jun 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:38:02 on Jun 18,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../cpu/tb_single_cycle_cpu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_single_cycle_cpu
+# -- Compiling architecture testbench of tb_single_cycle_cpu
+# -- Loading entity single_cycle_cpu
+# End time: 16:38:02 on Jun 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 16:38:05 on Jun 18,2016, Elapsed time: 0:33:45
+# Errors: 11, Warnings: 6
+# vsim work.tb_single_cycle_cpu 
+# Start time: 16:38:05 on Jun 18,2016
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_single_cycle_cpu(testbench)
+# Loading work.mem_pkg
+# Loading work.single_cycle_cpu(structural)
+# Loading work.fetch(structural)
+# Loading work.pc(behavioral)
+# Loading work.instr_mem(behavioral)
+# Loading work.instruction_decode(structural)
+# Loading work.regfile(behavioral)
+# Loading work.decoder(behavioral)
+# Loading work.execute(mixed)
+# Loading work.alu(behavioral)
+# Loading work.memory_access(mixed)
+# Loading work.data_mem(behavioral)
+# sim:/tb_single_cycle_cpu/dut
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_single_cycle_cpu/dut/i_decode/regfile_0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_single_cycle_cpu/dut/i_decode/regfile_0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /tb_single_cycle_cpu/dut/i_decode/regfile_0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /tb_single_cycle_cpu/dut/i_decode/regfile_0
+do do_sim.tcl
+# ../..
+# ../../program_counter
+# ../../register_file
+# ../../daten_instruktionsspeicher
+# ../../alu
+# ../../decoder
+# ../../cpu
+# work
+# ** Warning: (vlib-34) Library already exists at "work".
+# -93 -explicit -work work
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:48:01 on Jun 18,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../program_counter/pc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pc
+# -- Compiling architecture behavioral of pc
+# End time: 16:48:01 on Jun 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:48:01 on Jun 18,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../register_file/regfile.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity regfile
+# -- Compiling architecture behavioral of regfile
+# End time: 16:48:01 on Jun 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:48:01 on Jun 18,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../daten_instruktionsspeicher/mem_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package mem_pkg
+# End time: 16:48:01 on Jun 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:48:01 on Jun 18,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../daten_instruktionsspeicher/data_mem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mem_pkg
+# -- Compiling entity data_mem
+# -- Compiling architecture behavioral of data_mem
+# End time: 16:48:01 on Jun 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:48:02 on Jun 18,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../daten_instruktionsspeicher/instr_mem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mem_pkg
+# -- Compiling entity instr_mem
+# -- Compiling architecture behavioral of instr_mem
+# End time: 16:48:02 on Jun 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:48:02 on Jun 18,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../alu/alu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity alu
+# -- Compiling architecture behavioral of alu
+# ** Warning: ../../alu/alu.vhd(37): (vcom-1563) Choice in selected signal assignment must be locally static.
+# End time: 16:48:02 on Jun 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:48:02 on Jun 18,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../decoder/decoder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity decoder
+# -- Compiling architecture behavioral of decoder
+# End time: 16:48:02 on Jun 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:48:02 on Jun 18,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../cpu/fetch.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mem_pkg
+# -- Compiling entity fetch
+# -- Compiling architecture structural of fetch
+# -- Loading entity pc
+# -- Loading entity instr_mem
+# End time: 16:48:02 on Jun 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:48:02 on Jun 18,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../cpu/instruction_decode.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity instruction_decode
+# -- Compiling architecture structural of instruction_decode
+# -- Loading entity regfile
+# -- Loading entity decoder
+# End time: 16:48:03 on Jun 18,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:48:03 on Jun 18,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../cpu/execute.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity execute
+# -- Compiling architecture mixed of execute
+# -- Loading entity alu
+# End time: 16:48:03 on Jun 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:48:03 on Jun 18,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../cpu/memory_access.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mem_pkg
+# -- Compiling entity memory_access
+# -- Compiling architecture mixed of memory_access
+# -- Loading entity data_mem
+# End time: 16:48:03 on Jun 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:48:03 on Jun 18,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../cpu/single_cycle_cpu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity single_cycle_cpu
+# -- Compiling architecture structural of single_cycle_cpu
+# -- Loading package mem_pkg
+# -- Loading entity fetch
+# -- Loading entity instruction_decode
+# -- Loading entity execute
+# -- Loading entity memory_access
+# End time: 16:48:03 on Jun 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:48:03 on Jun 18,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../cpu/tb_single_cycle_cpu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_single_cycle_cpu
+# -- Compiling architecture testbench of tb_single_cycle_cpu
+# -- Loading entity single_cycle_cpu
+# End time: 16:48:04 on Jun 18,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 16:48:06 on Jun 18,2016, Elapsed time: 0:10:01
+# Errors: 0, Warnings: 5
+# vsim work.tb_single_cycle_cpu 
+# Start time: 16:48:06 on Jun 18,2016
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_single_cycle_cpu(testbench)
+# Loading work.mem_pkg
+# Loading work.single_cycle_cpu(structural)
+# Loading work.fetch(structural)
+# Loading work.pc(behavioral)
+# Loading work.instr_mem(behavioral)
+# Loading work.instruction_decode(structural)
+# Loading work.regfile(behavioral)
+# Loading work.decoder(behavioral)
+# Loading work.execute(mixed)
+# Loading work.alu(behavioral)
+# Loading work.memory_access(mixed)
+# Loading work.data_mem(behavioral)
+# sim:/tb_single_cycle_cpu/dut
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_single_cycle_cpu/dut/i_decode/regfile_0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_single_cycle_cpu/dut/i_decode/regfile_0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /tb_single_cycle_cpu/dut/i_decode/regfile_0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /tb_single_cycle_cpu/dut/i_decode/regfile_0
+# End time: 16:53:52 on Jun 18,2016, Elapsed time: 0:05:46
+# Errors: 0, Warnings: 4
