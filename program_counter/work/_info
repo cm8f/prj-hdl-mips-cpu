@@ -1,0 +1,93 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/yn38iluz/Documents/program_counter
+Epc
+Z1 w1462191594
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8pc.vhd
+Z6 Fpc.vhd
+l0
+L5
+VBBH0HP2R1T9PgOK5L:fib0
+!s100 oc_T5iYQ7=[90CO]c<QPf3
+Z7 OL;C;10.4;61
+31
+Z8 !s110 1462192225
+!i10b 1
+Z9 !s108 1462192225.554254
+Z10 !s90 -reportprogress|300|-93|pc.vhd|
+Z11 !s107 pc.vhd|
+!i113 0
+o-93
+Z12 tExplicit 1
+Abehavioral
+R2
+R3
+R4
+Z13 DEx4 work 2 pc 0 22 BBH0HP2R1T9PgOK5L:fib0
+31
+R8
+l21
+L16
+V6dZcEN@FPjG]?[33XEVYW2
+!s100 mYinKUm?VhWca9Bah7Ka40
+R7
+!i10b 1
+R9
+R10
+R11
+!i113 0
+o-93
+R12
+Epc_tb
+Z14 w1461591157
+R2
+R3
+R4
+R0
+Z15 8pc_tb.vhd
+Z16 Fpc_tb.vhd
+l0
+L5
+V?2F:9JU`?dMSART_OVHDn3
+!s100 E`nSH[H61V11]<dcZ^SG<1
+R7
+31
+R8
+!i10b 1
+Z17 !s108 1462192225.611985
+Z18 !s90 -reportprogress|300|-93|pc_tb.vhd|
+Z19 !s107 pc_tb.vhd|
+!i113 0
+o-93
+R12
+Atestbench
+R13
+R2
+R3
+R4
+DEx4 work 5 pc_tb 0 22 ?2F:9JU`?dMSART_OVHDn3
+31
+R8
+l21
+L8
+VJmF4n]KW:SHAdm8mRFW532
+!s100 h^DL?[k2QZJjM;=EYAVD50
+R7
+!i10b 1
+R17
+R18
+R19
+!i113 0
+o-93
+R12

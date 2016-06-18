@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/yn38iluz/Documents/program_counter/pc.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity pc
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/yn38iluz/Documents/program_counter/pc_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity pc_tb

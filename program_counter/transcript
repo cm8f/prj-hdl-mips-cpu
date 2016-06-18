@@ -1,0 +1,53 @@
+# //  Questa Sim-64
+# //  Version 10.4 linux_x86_64 Dec  2 2014
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# do do_sim.tcl
+# QuestaSim-64 vcom 10.4 Compiler 2014.12 Dec  2 2014
+# Start time: 14:30:25 on May 02,2016
+# vcom -reportprogress 300 -93 pc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pc
+# -- Compiling architecture behavioral of pc
+# End time: 14:30:25 on May 02,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.4 Compiler 2014.12 Dec  2 2014
+# Start time: 14:30:25 on May 02,2016
+# vcom -reportprogress 300 -93 pc_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pc_tb
+# -- Compiling architecture testbench of pc_tb
+# -- Loading entity pc
+# End time: 14:30:25 on May 02,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -do "do_sim.tcl" 
+# Start time: 14:30:25 on May 02,2016
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Loading std.standard
+# Refreshing /home/yn38iluz/Documents/program_counter/work.pc_tb(testbench)
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.pc_tb(testbench)
+# Refreshing /home/yn38iluz/Documents/program_counter/work.pc(behavioral)
+# Loading work.pc(behavioral)
+run 10 us
+# End time: 14:31:10 on May 02,2016, Elapsed time: 0:00:45
+# Errors: 0, Warnings: 1
