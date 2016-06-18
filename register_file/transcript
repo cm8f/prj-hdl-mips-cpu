@@ -1,0 +1,75 @@
+# //  Questa Sim-64
+# //  Version 10.4 linux_x86_64 Dec  2 2014
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# do do_sim.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# QuestaSim-64 vcom 10.4 Compiler 2014.12 Dec  2 2014
+# Start time: 15:24:52 on May 02,2016
+# vcom -reportprogress 300 -93 regfile.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity regfile
+# -- Compiling architecture behavioral of regfile
+# ** Error: regfile.vhd(38): near ";": (vcom-1576) expecting ')'.
+# ** Error: regfile.vhd(46): VHDL Compiler exiting
+# End time: 15:24:52 on May 02,2016, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: /opt/Mentor/questasim/linux_x86_64/vcom failed.
+# Error in macro ./do_sim.tcl line 3
+# /opt/Mentor/questasim/linux_x86_64/vcom failed.
+#     while executing
+# "vcom -93 regfile.vhd "
+do do_sim.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# QuestaSim-64 vcom 10.4 Compiler 2014.12 Dec  2 2014
+# Start time: 15:25:28 on May 02,2016
+# vcom -reportprogress 300 -93 regfile.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity regfile
+# -- Compiling architecture behavioral of regfile
+# End time: 15:25:28 on May 02,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.4 Compiler 2014.12 Dec  2 2014
+# Start time: 15:25:28 on May 02,2016
+# vcom -reportprogress 300 -93 regfile_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity regfile_tb
+# -- Compiling architecture testbench of regfile_tb
+# -- Loading entity regfile
+# End time: 15:25:28 on May 02,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -do "do_sim.tcl" 
+# Start time: 15:25:28 on May 02,2016
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Loading std.standard
+# Refreshing /home/yn38iluz/Documents/register_file/work.regfile_tb(testbench)
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.regfile_tb(testbench)
+# Refreshing /home/yn38iluz/Documents/register_file/work.regfile(behavioral)
+# Loading work.regfile(behavioral)
+run 1 us
+# Window cannot be closed because the modal window "Quit Vsim" is still open.
+# End time: 15:57:49 on May 02,2016, Elapsed time: 0:32:21
+# Errors: 0, Warnings: 2

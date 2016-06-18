@@ -1,0 +1,93 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/yn38iluz/Documents/register_file
+Eregfile
+Z1 w1462195521
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8regfile.vhd
+Z6 Fregfile.vhd
+l0
+L5
+VgR=B5n3;J49X:VlMX<aEk1
+!s100 3[gPoAnM2SN=?iTXQP9N92
+Z7 OL;C;10.4;61
+31
+Z8 !s110 1462195528
+!i10b 1
+Z9 !s108 1462195528.847540
+Z10 !s90 -reportprogress|300|-93|regfile.vhd|
+Z11 !s107 regfile.vhd|
+!i113 0
+o-93
+Z12 tExplicit 1
+Abehavioral
+R2
+R3
+R4
+Z13 DEx4 work 7 regfile 0 22 gR=B5n3;J49X:VlMX<aEk1
+31
+R8
+l27
+L19
+VFBd]aO<b@M`U>P5NbR@^G2
+!s100 <?KH9NH5f_0=Gc_`BQ3YR0
+R7
+!i10b 1
+R9
+R10
+R11
+!i113 0
+o-93
+R12
+Eregfile_tb
+Z14 w1462195246
+R2
+R3
+R4
+R0
+Z15 8regfile_tb.vhd
+Z16 Fregfile_tb.vhd
+l0
+L5
+VGOfV1YTeTK9M>I5i:=4iT2
+!s100 `gSFn77n@nIc@nYSBf`3i1
+R7
+31
+R8
+!i10b 1
+Z17 !s108 1462195528.904395
+Z18 !s90 -reportprogress|300|-93|regfile_tb.vhd|
+Z19 !s107 regfile_tb.vhd|
+!i113 0
+o-93
+R12
+Atestbench
+R13
+R2
+R3
+R4
+DEx4 work 10 regfile_tb 0 22 GOfV1YTeTK9M>I5i:=4iT2
+31
+R8
+l23
+L8
+V[I8T<14Rjo6k?_m21]f3z3
+!s100 H7hIhF51eI@GJk56MA_E_0
+R7
+!i10b 1
+R17
+R18
+R19
+!i113 0
+o-93
+R12
