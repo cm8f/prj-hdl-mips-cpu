@@ -7,13 +7,13 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 d/home/phil/cpu_entwurf/cpu/modelsim
+d/home/phil/cpu_entwurf/cpu/modelsim
 Ealu
-Z1 w1466241690
-Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
-Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-R0
+Z0 w1466515221
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 d/media/phil/raid-Dokumente/uni/master/3_SS16/CPU/Ubungen/cpu_entwurf/cpu/modelsim
 Z5 8../../alu/alu.vhd
 Z6 F../../alu/alu.vhd
 l0
@@ -22,23 +22,23 @@ VaYEeFBNVz@aHc`z40n`M@3
 !s100 bMz@e3FdB6^4dO?<A=?o`0
 Z7 OV;C;10.4b;61
 31
-Z8 !s110 1466261282
+Z8 !s110 1466957006
 !i10b 1
-Z9 !s108 1466261282.000000
+Z9 !s108 1466957006.000000
 Z10 !s90 -reportprogress|300|-93|-explicit|-work|work|../../alu/alu.vhd|
 Z11 !s107 ../../alu/alu.vhd|
 !i113 1
 Z12 o-93 -explicit -work work
 Z13 tExplicit 1
 Abehavioral
+R1
 R2
 R3
-R4
 Z14 DEx4 work 3 alu 0 22 aYEeFBNVz@aHc`z40n`M@3
 l22
 L16
-VW4;dIQ9]LhR@M5BY6QX1O1
-!s100 m9k3F3_K@@JcjR7RW@agP2
+V>2e?fd1_`n=QJH`m0Im`Z1
+!s100 X?;fC863VXKX4CQnEM2J:3
 R7
 31
 R8
@@ -50,12 +50,12 @@ R11
 R12
 R13
 Edata_mem
-Z15 w1466241317
-Z16 DPx4 work 7 mem_pkg 0 22 lT:mNd<<=ng:[Oc3_:X;z0
+Z15 w1464623472
+Z16 DPx4 work 7 mem_pkg 0 22 JnE0McKN8am;_b`2<k>5L0
+R1
 R2
 R3
 R4
-R0
 Z17 8../../daten_instruktionsspeicher/data_mem.vhd
 Z18 F../../daten_instruktionsspeicher/data_mem.vhd
 l0
@@ -64,42 +64,42 @@ VSgM:T`MVF<n<CE=^4m^0>3
 !s100 ]J^R[d77njO7NRLJ8bcER2
 R7
 31
-Z19 !s110 1466261281
+R8
 !i10b 1
-Z20 !s108 1466261281.000000
-Z21 !s90 -reportprogress|300|-93|-explicit|-work|work|../../daten_instruktionsspeicher/data_mem.vhd|
-Z22 !s107 ../../daten_instruktionsspeicher/data_mem.vhd|
+R9
+Z19 !s90 -reportprogress|300|-93|-explicit|-work|work|../../daten_instruktionsspeicher/data_mem.vhd|
+Z20 !s107 ../../daten_instruktionsspeicher/data_mem.vhd|
 !i113 1
 R12
 R13
 Abehavioral
 R16
+R1
 R2
 R3
-R4
-Z23 DEx4 work 8 data_mem 0 22 SgM:T`MVF<n<CE=^4m^0>3
+Z21 DEx4 work 8 data_mem 0 22 SgM:T`MVF<n<CE=^4m^0>3
 l22
 L18
 V<f`D<F[GBX^8gSY[D3H[Y2
 !s100 P@Q>aWL]=aCmfaIT1ckl=1
 R7
 31
-R19
+R8
 !i10b 1
+R9
+R19
 R20
-R21
-R22
 !i113 1
 R12
 R13
 Edecoder
-R15
+Z22 w1466951374
+R1
 R2
 R3
 R4
-R0
-Z24 8../../decoder/decoder.vhd
-Z25 F../../decoder/decoder.vhd
+Z23 8../../decoder/decoder.vhd
+Z24 F../../decoder/decoder.vhd
 l0
 L7
 VH]n64PkD0mWdiJgOdHTCi1
@@ -109,81 +109,122 @@ R7
 R8
 !i10b 1
 R9
-Z26 !s90 -reportprogress|300|-93|-explicit|-work|work|../../decoder/decoder.vhd|
-Z27 !s107 ../../decoder/decoder.vhd|
+Z25 !s90 -reportprogress|300|-93|-explicit|-work|work|../../decoder/decoder.vhd|
+Z26 !s107 ../../decoder/decoder.vhd|
 !i113 1
 R12
 R13
 Abehavioral
+R1
 R2
 R3
-R4
-Z28 DEx4 work 7 decoder 0 22 H]n64PkD0mWdiJgOdHTCi1
+Z27 DEx4 work 7 decoder 0 22 H]n64PkD0mWdiJgOdHTCi1
 l29
 L22
-ViJgCBl5eVeLGZ=Bb0h>R<0
-!s100 Vk0l^?R5E]7]oXMj=GUNV0
+VPnDJUYiDeIjfClknjJKR41
+!s100 meiS:MSIZ_NO7Wfk;O;DE0
 R7
 31
 R8
 !i10b 1
 R9
+R25
 R26
-R27
+!i113 1
+R12
+R13
+Edecoder3
+Z28 w1466944743
+R1
+R2
+R3
+R4
+Z29 8../../decoder/decoder3.vhd
+Z30 F../../decoder/decoder3.vhd
+l0
+L7
+Vzi>Ba]2`dlWodAh94Sm=X1
+!s100 S;]MH^;o11P@RV>nS^nfh3
+R7
+31
+R8
+!i10b 1
+R9
+Z31 !s90 -reportprogress|300|-93|-explicit|-work|work|../../decoder/decoder3.vhd|
+Z32 !s107 ../../decoder/decoder3.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R1
+R2
+R3
+DEx4 work 8 decoder3 0 22 zi>Ba]2`dlWodAh94Sm=X1
+l28
+L22
+VSbJEYW=V;PlhV@^@@ek1N0
+!s100 geN5l0RAEdIf1>7dETHF<1
+R7
+31
+R8
+!i10b 1
+R9
+R31
+R32
 !i113 1
 R12
 R13
 Eexecute
-R15
+Z33 w1466263379
+R1
 R2
 R3
 R4
-R0
-Z29 8../../cpu/execute.vhd
-Z30 F../../cpu/execute.vhd
+Z34 8../../cpu/execute.vhd
+Z35 F../../cpu/execute.vhd
 l0
 L5
-V7z91o;dBfhlUl_@W=JVdA2
-!s100 KKafMfgZN0G<HiUiAaRQK1
+VKELL=8IQ>g98SUOdl4n;V0
+!s100 bO[>1O>cY;RCE[4DCh48J0
 R7
 31
-Z31 !s110 1466261283
+R8
 !i10b 1
-Z32 !s108 1466261283.000000
-Z33 !s90 -reportprogress|300|-93|-explicit|-work|work|../../cpu/execute.vhd|
-Z34 !s107 ../../cpu/execute.vhd|
+R9
+Z36 !s90 -reportprogress|300|-93|-explicit|-work|work|../../cpu/execute.vhd|
+Z37 !s107 ../../cpu/execute.vhd|
 !i113 1
 R12
 R13
 Amixed
 R14
+R1
 R2
 R3
-R4
-Z35 DEx4 work 7 execute 0 22 7z91o;dBfhlUl_@W=JVdA2
-l38
-L34
-V=CP1RmnYKm@?nN@7g^9jM0
-!s100 CbfSUP`ZCmTbUK91o__ob0
+Z38 DEx4 work 7 execute 0 22 KELL=8IQ>g98SUOdl4n;V0
+l40
+L36
+VXWB@V=UKFW>PGDoT<m5[O0
+!s100 ok<g1oi7:f6k1cI_TcZXe3
 R7
 31
-R31
+R8
 !i10b 1
-R32
-R33
-R34
+R9
+R36
+R37
 !i113 1
 R12
 R13
 Efetch
-R15
+Z39 w1465736407
 R16
+R1
 R2
 R3
 R4
-R0
-Z36 8../../cpu/fetch.vhd
-Z37 F../../cpu/fetch.vhd
+Z40 8../../cpu/fetch.vhd
+Z41 F../../cpu/fetch.vhd
 l0
 L7
 Vc6nTKbYTomK4MnjTRGR6]0
@@ -193,19 +234,19 @@ R7
 R8
 !i10b 1
 R9
-Z38 !s90 -reportprogress|300|-93|-explicit|-work|work|../../cpu/fetch.vhd|
-Z39 !s107 ../../cpu/fetch.vhd|
+Z42 !s90 -reportprogress|300|-93|-explicit|-work|work|../../cpu/fetch.vhd|
+Z43 !s107 ../../cpu/fetch.vhd|
 !i113 1
 R12
 R13
 Astructural
-Z40 DEx4 work 9 instr_mem 0 22 E3CAb=;B0No61Mi6KKoEK2
-Z41 DEx4 work 2 pc 0 22 ^_7oo6@9>WSPm1?5clCN21
+Z44 DEx4 work 9 instr_mem 0 22 E3CAb=;B0No61Mi6KKoEK2
+Z45 DEx4 work 2 pc 0 22 ^_7oo6@9>WSPm1?5clCN21
 R16
+R1
 R2
 R3
-R4
-Z42 DEx4 work 5 fetch 0 22 c6nTKbYTomK4MnjTRGR6]0
+Z46 DEx4 work 5 fetch 0 22 c6nTKbYTomK4MnjTRGR6]0
 l24
 L18
 VQ]Q@<n1i]]8>keo:>ZdzJ2
@@ -215,20 +256,20 @@ R7
 R8
 !i10b 1
 R9
-R38
-R39
+R42
+R43
 !i113 1
 R12
 R13
 Einstr_mem
 R15
 R16
+R1
 R2
 R3
 R4
-R0
-Z43 8../../daten_instruktionsspeicher/instr_mem.vhd
-Z44 F../../daten_instruktionsspeicher/instr_mem.vhd
+Z47 8../../daten_instruktionsspeicher/instr_mem.vhd
+Z48 F../../daten_instruktionsspeicher/instr_mem.vhd
 l0
 L7
 VE3CAb=;B0No61Mi6KKoEK2
@@ -238,17 +279,17 @@ R7
 R8
 !i10b 1
 R9
-Z45 !s90 -reportprogress|300|-93|-explicit|-work|work|../../daten_instruktionsspeicher/instr_mem.vhd|
-Z46 !s107 ../../daten_instruktionsspeicher/instr_mem.vhd|
+Z49 !s90 -reportprogress|300|-93|-explicit|-work|work|../../daten_instruktionsspeicher/instr_mem.vhd|
+Z50 !s107 ../../daten_instruktionsspeicher/instr_mem.vhd|
 !i113 1
 R12
 R13
 Abehavioral
 R16
+R1
 R2
 R3
-R4
-R40
+R44
 l19
 L15
 VN12@EPNOTEHX0MMGClnHV1
@@ -258,287 +299,293 @@ R7
 R8
 !i10b 1
 R9
-R45
-R46
-!i113 1
-R12
-R13
-Einstruction_decode
-R15
-R2
-R3
-R4
-R0
-Z47 8../../cpu/instruction_decode.vhd
-Z48 F../../cpu/instruction_decode.vhd
-l0
-L5
-Vkl_PjAg5gYM2cIghcSc5j1
-!s100 e0DfKjD22LjFF;oATzD<51
-R7
-31
-R31
-!i10b 1
-R9
-Z49 !s90 -reportprogress|300|-93|-explicit|-work|work|../../cpu/instruction_decode.vhd|
-Z50 !s107 ../../cpu/instruction_decode.vhd|
-!i113 1
-R12
-R13
-Astructural
-R28
-Z51 DEx4 work 7 regfile 0 22 <7CaeD<75X2GDL_:QWmNP2
-R2
-R3
-R4
-Z52 DEx4 work 18 instruction_decode 0 22 kl_PjAg5gYM2cIghcSc5j1
-l38
-L26
-VWOBTHQ@`?d[`MD37U778_0
-!s100 5X;@S6XWb4F`>>G@2lge_2
-R7
-31
-R31
-!i10b 1
-R9
 R49
 R50
 !i113 1
 R12
 R13
-Pmem_pkg
+Einstruction_decode
+Z51 w1466948114
+Z52 DPx8 synopsys 10 attributes 0 22 liCm]LV3<lX4Zl>o6^8IV1
+Z53 DPx4 ieee 14 std_logic_misc 0 22 BLzBaQbXS>Q1z>5YO]m[52
+R1
 R2
 R3
 R4
-w1466261272
-R0
+Z54 8../../cpu/instruction_decode.vhd
+Z55 F../../cpu/instruction_decode.vhd
+l0
+L6
+VMTO4eCMLWI;PIBh`Zz``d1
+!s100 FQa98<]?BMicAG0h9PGjN3
+R7
+31
+R8
+!i10b 1
+R9
+Z56 !s90 -reportprogress|300|-93|-explicit|-work|work|../../cpu/instruction_decode.vhd|
+Z57 !s107 ../../cpu/instruction_decode.vhd|
+!i113 1
+R12
+R13
+Astructural
+R27
+Z58 DEx4 work 7 regfile 0 22 <7CaeD<75X2GDL_:QWmNP2
+R52
+R53
+R1
+R2
+R3
+Z59 DEx4 work 18 instruction_decode 0 22 MTO4eCMLWI;PIBh`Zz``d1
+l40
+L28
+VLmGP6F?liX3dbAIX?C9K52
+!s100 CH^ac=B1>E0@d]1P@UbCU2
+R7
+31
+R8
+!i10b 1
+R9
+R56
+R57
+!i113 1
+R12
+R13
+Pmem_pkg
+R1
+R2
+R3
+w1466956828
+R4
 8../../daten_instruktionsspeicher/mem_pkg.vhd
 F../../daten_instruktionsspeicher/mem_pkg.vhd
 l0
 L5
-VlT:mNd<<=ng:[Oc3_:X;z0
-!s100 OSM;EA]9i>b3SI7cdC:2b0
+VJnE0McKN8am;_b`2<k>5L0
+!s100 e[AFUi>=?958Vnj=GkLF91
 R7
 31
-R19
+R8
 !i10b 1
-R20
+R9
 !s90 -reportprogress|300|-93|-explicit|-work|work|../../daten_instruktionsspeicher/mem_pkg.vhd|
 !s107 ../../daten_instruktionsspeicher/mem_pkg.vhd|
 !i113 1
 R12
 R13
 Ememory_access
-R15
+Z60 w1466956968
 R16
+R1
 R2
 R3
 R4
-R0
-Z53 8../../cpu/memory_access.vhd
-Z54 F../../cpu/memory_access.vhd
+Z61 8../../cpu/memory_access.vhd
+Z62 F../../cpu/memory_access.vhd
 l0
 L7
-VEfN:ZTao9<[3`QQ:oe0]g1
-!s100 belLSS7KKlA2^lBQ6YAni3
+VX3]26=_AS[fGPh@;L6aH72
+!s100 ;UmQEVRBQ<1fGAJkIAeGS2
 R7
 31
-R31
+R8
 !i10b 1
-R32
-Z55 !s90 -reportprogress|300|-93|-explicit|-work|work|../../cpu/memory_access.vhd|
-Z56 !s107 ../../cpu/memory_access.vhd|
+R9
+Z63 !s90 -reportprogress|300|-93|-explicit|-work|work|../../cpu/memory_access.vhd|
+Z64 !s107 ../../cpu/memory_access.vhd|
 !i113 1
 R12
 R13
 Amixed
-R23
+R21
 R16
+R1
 R2
 R3
-R4
-Z57 DEx4 work 13 memory_access 0 22 EfN:ZTao9<[3`QQ:oe0]g1
-l35
-L30
-Vi8oiG_k0kE:6H<SY]^o660
-!s100 dBC7fYZjhONf21Y44zl:z2
+Z65 DEx4 work 13 memory_access 0 22 X3]26=_AS[fGPh@;L6aH72
+l37
+L31
+V6gcUa<0UIjNcd4d7k8EmY0
+!s100 8CFDM;h3NNeA6MkXhlW]13
 R7
 31
-R31
+R8
 !i10b 1
-R32
-R55
-R56
+R9
+R63
+R64
 !i113 1
 R12
 R13
 Epc
-Z58 w1466259542
+Z66 w1466265815
+R1
 R2
 R3
 R4
-R0
-Z59 8../../program_counter/pc.vhd
-Z60 F../../program_counter/pc.vhd
+Z67 8../../program_counter/pc.vhd
+Z68 F../../program_counter/pc.vhd
 l0
 L5
 V^_7oo6@9>WSPm1?5clCN21
 !s100 oc_T5iYQ7=[90CO]c<QPf3
 R7
 31
-R19
+R8
 !i10b 1
-R20
-Z61 !s90 -reportprogress|300|-93|-explicit|-work|work|../../program_counter/pc.vhd|
-Z62 !s107 ../../program_counter/pc.vhd|
+R9
+Z69 !s90 -reportprogress|300|-93|-explicit|-work|work|../../program_counter/pc.vhd|
+Z70 !s107 ../../program_counter/pc.vhd|
 !i113 1
 R12
 R13
 Abehavioral
+R1
 R2
 R3
-R4
-R41
+R45
 l21
 L16
-V@XJHo>aAidB9[AR2MeYMM1
-!s100 YY;JPLTDianQ]78C[i6@31
+V?Q`cL<1jBKVD97H_Sej@[1
+!s100 mFjP3zZ_Ei?h`IF?m`NVZ0
 R7
 31
-R19
+R8
 !i10b 1
-R20
-R61
-R62
+R9
+R69
+R70
 !i113 1
 R12
 R13
 Eregfile
 R15
+R1
 R2
 R3
 R4
-R0
-Z63 8../../register_file/regfile.vhd
-Z64 F../../register_file/regfile.vhd
+Z71 8../../register_file/regfile.vhd
+Z72 F../../register_file/regfile.vhd
 l0
 L5
 V<7CaeD<75X2GDL_:QWmNP2
 !s100 3[gPoAnM2SN=?iTXQP9N92
 R7
 31
-R19
+R8
 !i10b 1
-R20
-Z65 !s90 -reportprogress|300|-93|-explicit|-work|work|../../register_file/regfile.vhd|
-Z66 !s107 ../../register_file/regfile.vhd|
+R9
+Z73 !s90 -reportprogress|300|-93|-explicit|-work|work|../../register_file/regfile.vhd|
+Z74 !s107 ../../register_file/regfile.vhd|
 !i113 1
 R12
 R13
 Abehavioral
+R1
 R2
 R3
-R4
-R51
+R58
 l27
 L19
 VQz0^Vc<O0^7b`_3Yl]Qdo0
 !s100 <?KH9NH5f_0=Gc_`BQ3YR0
 R7
 31
-R19
+R8
 !i10b 1
-R20
-R65
-R66
+R9
+R73
+R74
 !i113 1
 R12
 R13
 Esingle_cycle_cpu
-R15
+Z75 w1466954573
+R1
 R2
 R3
 R4
-R0
-Z67 8../../cpu/single_cycle_cpu.vhd
-Z68 F../../cpu/single_cycle_cpu.vhd
+Z76 8../../cpu/single_cycle_cpu.vhd
+Z77 F../../cpu/single_cycle_cpu.vhd
 l0
 L5
 V^Fd<H9@NA6k?SbYN]zGJX2
 !s100 97[9WWhcHa<]O[XX4[19?1
 R7
 31
-R31
+R8
 !i10b 1
-R32
-Z69 !s90 -reportprogress|300|-93|-explicit|-work|work|../../cpu/single_cycle_cpu.vhd|
-Z70 !s107 ../../cpu/single_cycle_cpu.vhd|
+R9
+Z78 !s90 -reportprogress|300|-93|-explicit|-work|work|../../cpu/single_cycle_cpu.vhd|
+Z79 !s107 ../../cpu/single_cycle_cpu.vhd|
 !i113 1
 R12
 R13
 Astructural
-R57
-R35
+R65
+R38
 R52
+R53
+R59
 R16
-R42
+R46
+R1
 R2
 R3
-R4
-Z71 DEx4 work 16 single_cycle_cpu 0 22 ^Fd<H9@NA6k?SbYN]zGJX2
-l43
+Z80 DEx4 work 16 single_cycle_cpu 0 22 ^Fd<H9@NA6k?SbYN]zGJX2
+l47
 L13
-V_h2K8F9N]1S<M@IlN]5]l2
-!s100 AXj_B489B51^MMdo1G;6b0
+V>2i=O5H>za>Ifb:C7aXKW3
+!s100 iV2[EWiU]ff6SA37h72gb3
 R7
 31
-R31
+R8
 !i10b 1
-R32
-R69
-R70
+R9
+R78
+R79
 !i113 1
 R12
 R13
 Etb_single_cycle_cpu
-Z72 w1466258613
+Z81 w1466943229
+R1
 R2
 R3
 R4
-R0
-Z73 8../../cpu/tb_single_cycle_cpu.vhd
-Z74 F../../cpu/tb_single_cycle_cpu.vhd
+Z82 8../../cpu/tb_single_cycle_cpu.vhd
+Z83 F../../cpu/tb_single_cycle_cpu.vhd
 l0
 L5
 VLcezK40@3S9dBd:eSi@?U2
 !s100 @C9IT6KfeG7@=J5GG[UQ^1
 R7
 31
-Z75 !s110 1466261284
+R8
 !i10b 1
-R32
-Z76 !s90 -reportprogress|300|-93|-explicit|-work|work|../../cpu/tb_single_cycle_cpu.vhd|
-Z77 !s107 ../../cpu/tb_single_cycle_cpu.vhd|
+R9
+Z84 !s90 -reportprogress|300|-93|-explicit|-work|work|../../cpu/tb_single_cycle_cpu.vhd|
+Z85 !s107 ../../cpu/tb_single_cycle_cpu.vhd|
 !i113 1
 R12
 R13
 Atestbench
-R71
+R80
+R1
 R2
 R3
-R4
-Z78 DEx4 work 19 tb_single_cycle_cpu 0 22 LcezK40@3S9dBd:eSi@?U2
+Z86 DEx4 work 19 tb_single_cycle_cpu 0 22 LcezK40@3S9dBd:eSi@?U2
 l16
 L8
-Z79 Ve>gTgiD0n6<clE40;GeFS1
-Z80 !s100 3Ve>X7oneVLDcN`VBeldH1
+Z87 VDW_[:]XdaU711TgHQz[oP1
+Z88 !s100 HCj_1mATL144;9hecA2ZJ0
 R7
 31
-R75
+R8
 !i10b 1
-R32
-R76
-R77
+R9
+R84
+R85
 !i113 1
 R12
 R13

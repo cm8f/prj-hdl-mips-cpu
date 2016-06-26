@@ -1,24 +1,26 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+use ieee.std_logic_misc.all;
 
 entity instruction_decode is
 	port(
-		clk 			: in  std_logic;
+		clk 		: in  std_logic;
 		reset 		: in  std_logic;
-		pc_in			: in  std_logic_vector(31 downto 0);
+		pc_in		: in  std_logic_vector(31 downto 0);
 		pc_out		: out std_logic_vector(31 downto 0);
 		instruction : in  std_logic_vector(31 downto 0);
 		rd_data0 	: out std_logic_vector(31 downto 0);
-		rd_data1		: out std_logic_vector(31 downto 0);
+		rd_data1	: out std_logic_vector(31 downto 0);
 		sign_extend : out std_logic_vector(31 downto 0);
-		wr_data  : in  std_logic_vector(31 downto 0);
+		wr_data     : in  std_logic_vector(31 downto 0);
+        jump_addr   : out std_logic_vector(31 downto 0);
 		-- control
 		branch		: out std_logic;
-		jump			: out std_logic;
-		memtoreg		: out std_logic;
-		alucntrl		: out std_logic_vector(3 downto 0);
-		memwrite		: out std_logic;
+		jump		: out std_logic;
+		memtoreg	: out std_logic;
+		alucntrl	: out std_logic_vector(3 downto 0);
+		memwrite	: out std_logic;
 		alusrc		: out std_logic
 	);
 end entity instruction_decode;
@@ -43,6 +45,8 @@ sign_extend <= std_logic_vector(resize(signed(instruction(15 downto 0)), 32));
 
 slv_rd_addr0 <= instruction(25 downto 21);
 slv_rd_addr1 <= instruction(20 downto 16);
+
+jump_addr <= pc_in(31 downto 28) & instruction(25 downto 0)& "00";
 
 with sl_regdst select slv_wr_addr <= 
 						instruction(20 downto 16) when '0',

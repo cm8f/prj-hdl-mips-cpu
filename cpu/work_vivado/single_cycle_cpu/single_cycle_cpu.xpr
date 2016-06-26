@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="5" Path="/home/phil/cpu_entwurf/cpu/work_vivado/single_cycle_cpu/single_cycle_cpu.xpr">
+<Project Version="7" Minor="5" Path="/media/phil/raid-Dokumente/uni/master/3_SS16/CPU/Ubungen/cpu_entwurf/cpu/work_vivado/single_cycle_cpu/single_cycle_cpu.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="c6896c095c4c44c09219ac15c5bade70"/>
@@ -25,7 +25,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../alu/alu.vhd">
+      <File Path="$PPRDIR/../../../register_file/regfile.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -37,7 +37,13 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../register_file/regfile.vhd">
+      <File Path="$PPRDIR/../../../daten_instruktionsspeicher/data_mem.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../alu/alu.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -49,13 +55,13 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../daten_instruktionsspeicher/data_mem.vhd">
+      <File Path="$PPRDIR/../../../daten_instruktionsspeicher/instr_mem.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../daten_instruktionsspeicher/instr_mem.vhd">
+      <File Path="$PPRDIR/../../../daten_instruktionsspeicher/hw_reg.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -67,13 +73,13 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../execute.vhd">
+      <File Path="$PPRDIR/../../instruction_decode.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../instruction_decode.vhd">
+      <File Path="$PPRDIR/../../execute.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -87,6 +93,13 @@
       </File>
       <File Path="$PPRDIR/../../single_cycle_cpu.vhd">
         <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../decoder/decoder3.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>

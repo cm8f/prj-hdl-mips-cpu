@@ -7,6 +7,8 @@ entity execute is
 		pc_in 		: in  std_logic_vector(31 downto 0);
 		pc_out		: out std_logic_vector(31 downto 0);
 		pc_calc		: out std_logic_vector(31 downto 0);
+        jump_addr_in: in  std_logic_vector(31 downto 0);
+        jump_addr_out:out std_logic_vector(31 downto 0);
 		rd_data0		: in  std_logic_vector(31 downto 0);
 		rd_data1		: in  std_logic_vector(31 downto 0);
 		sign_extend	: in  std_logic_vector(31 downto 0);
@@ -36,6 +38,8 @@ architecture mixed of execute is
 signal slv_b : std_logic_vector(31 downto 0);
 
 begin
+
+    jump_addr_out <= jump_addr_in;
 
 branch 	<= branch_in;
 jump   	<= jump_in;

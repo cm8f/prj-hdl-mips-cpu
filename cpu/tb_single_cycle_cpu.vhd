@@ -20,7 +20,7 @@ begin
     process
     begin
         reset <= '1';
-        wait for 5*period;
+        wait for period;
         reset <= '0';
         wait;
     end process;
