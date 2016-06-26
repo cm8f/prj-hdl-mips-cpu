@@ -1,22 +1,7 @@
-# //  Questa Sim-64
-# //  Version 10.4 linux_x86_64 Dec  2 2014
-# //
-# //  Copyright 1991-2014 Mentor Graphics Corporation
-# //  All Rights Reserved.
-# //
-# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
-# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
-# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
-# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
-# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
-# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
-# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
-# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
-# //
 # do do_sim.tcl
 # ** Warning: (vlib-34) Library already exists at "work".
-# QuestaSim-64 vcom 10.4 Compiler 2014.12 Dec  2 2014
-# Start time: 15:47:52 on May 30,2016
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:32:44 on Jun 26,2016
 # vcom -reportprogress 300 -93 -explicit decoder.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -24,10 +9,21 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity decoder
 # -- Compiling architecture behavioral of decoder
-# End time: 15:47:52 on May 30,2016, Elapsed time: 0:00:00
+# End time: 15:32:44 on Jun 26,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vcom 10.4 Compiler 2014.12 Dec  2 2014
-# Start time: 15:47:52 on May 30,2016
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:32:44 on Jun 26,2016
+# vcom -reportprogress 300 -93 -explicit decoder3.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity decoder3
+# -- Compiling architecture behavioral of decoder3
+# End time: 15:32:44 on Jun 26,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:32:44 on Jun 26,2016
 # vcom -reportprogress 300 -93 -explicit tb_decoder.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -36,18 +32,15 @@
 # -- Compiling entity tb_decoder
 # -- Compiling architecture testbench of tb_decoder
 # -- Loading entity decoder
-# End time: 15:47:52 on May 30,2016, Elapsed time: 0:00:00
+# End time: 15:32:44 on Jun 26,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -do "do_sim.tcl" 
-# Start time: 15:47:52 on May 30,2016
-# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# vsim -novopt work.tb_decoder 
+# Start time: 15:32:44 on Jun 26,2016
 # Loading std.standard
-# Refreshing /home/yn38iluz/Documents/decoder/work.tb_decoder(testbench)
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
 # Loading work.tb_decoder(testbench)
-# Refreshing /home/yn38iluz/Documents/decoder/work.decoder(behavioral)
 # Loading work.decoder(behavioral)
-# End time: 15:49:02 on May 30,2016, Elapsed time: 0:01:10
-# Errors: 0, Warnings: 1
+# End time: 15:34:39 on Jun 26,2016, Elapsed time: 0:01:55
+# Errors: 0, Warnings: 0

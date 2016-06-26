@@ -21,6 +21,8 @@ signal regwrite	: std_logic;
 signal slv_opcode : std_logic_vector(7 downto 0) := (others => '0');
 signal slv_func   : std_logic_vector(7 downto 0) := (others => '0');
 
+signal vec : std_logic_vector(15 downto 0);
+
 begin
 
 opcode <= slv_opcode(5 downto 0);
@@ -40,24 +42,36 @@ port map(
 	regwrite => regwrite
 );
 
-stimuli: process
+stimuli2: process
 begin
-	slv_func   <= x"00";
-	slv_opcode <= x"0f";
-	wait for 10 ns;
-	slv_opcode <= x"08";
-	wait for 10 ns;
-	slv_opcode <= x"04";
-	wait for 10 ns;
-	slv_opcode <= x"23";
-	wait for 10 ns;
-	slv_opcode <= x"2b";
-	wait for 50 ns;
-	slv_opcode <= x"00";
-	slv_func <= x"24";
-	wait for 10 ns;
-	slv_func <= x"2A";
-	wait;
-end process stimuli;
+    vec <= x"0024";
+    wait for 10 ns;
+    vec <= x"0025";
+    wait for 10 ns;
+    vec <= x"0020";
+    wait for 10 ns;
+    vec <= x"0faa";
+    wait for 10 ns;
+    vec <= x"0026";
+    wait for 10 ns;
+    vec <= x"0022";
+    wait for 10 ns;
+    vec <= x"002a";
+    wait for 10 ns;
+    vec <= x"0027";
+    wait for 10 ns;
+    vec <= x"0806";
+    wait for 10 ns;
+    vec <= x"0406";
+    wait for 10 ns;
+    vec <= x"2306";
+    wait for 10 ns;
+    vec <= x"2b06";
+    wait for 10 ns;
+    wait;
+end process;
+
+slv_func <= vec(7 downto 0);
+slv_opcode <= vec(15 downto 8);
 
 end architecture testbench;

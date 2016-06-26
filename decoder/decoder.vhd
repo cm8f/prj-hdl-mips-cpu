@@ -66,40 +66,68 @@ begin
 	when x"2b" =>			-- SW
 		slv_alu <= "0010";
 	when others => 			-- undefined
-		slv_alu <= "0000";
+		slv_alu <= "1111";
 	end case;
 end process alu_decode;
 
 -- branch
-with slv_opcode select Branch <= '1' when x"04", 
-					   			 '0' when others;
+--with slv_opcode select Branch <= '1' when x"04", 
+--					   			 '0' when others;
 
 -- memwrite
-with slv_opcode select MemWrite <= 	'1' when x"2b",
-								   	'0' when others;
+--with slv_opcode select MemWrite <= 	'1' when x"2b",
+--								   	'0' when others;
 
 -- memread ignored
 
 -- regwrite
-with slv_opcode select RegWrite <=  '0' when x"2b",
-									'0' when x"04",
-									'1' when others;
+--with slv_opcode select RegWrite <=  '0' when x"2b",
+--									'0' when x"04",
+--									'1' when others;
 
 -- mem2reg
-with slv_opcode select MemtoReg <=  '0' when x"00",
-									'1' when others; 
+--with slv_opcode select MemtoReg <=  '0' when x"00",
+--									'1' when others; 
 
 -- alusrc
-with slv_opcode select ALUSrc <= 	'1' when x"23",
-									'1' when x"2b",
-									'0' when others;
+--with slv_opcode select ALUSrc <= 	'1' when x"23",
+--									'1' when x"2b",
+--									'0' when others;
 
 -- regdest
-with slv_opcode select RegDst <= 	'0' when x"23",
-									'1' when others;
+--with slv_opcode select RegDst <= 	'0' when x"23",
+--									'1' when others;
 
 -- jump
-with slv_opcode select Jump <= 		'1' when x"02",
-									'0' when others;
+--with slv_opcode select Jump <= 		'1' when x"02",
+--									'0' when others;
+
+
+with slv_opcode select jump <= '1' when x"02",
+                   '0' when others;
+
+with slv_opcode select branch <= '1' when x"04",
+                    '0' when others;
+                    
+with slv_opcode select memwrite <= '1' when x"2b", 
+                    '0' when others;
+                    
+with slv_opcode select regwrite <= '0' when x"04",
+                    '0' when x"2b",
+                    '1' when others;
+
+with slv_opcode select memtoreg <= '1' when x"2b",
+                    '0' when others;
+
+with slv_opcode select alusrc <= '0' when x"00",
+                    '0' when x"04",
+                    '1' when others; 
+
+--with slv_opcode select regdst <= '0' when x"23",
+--                    '1' when others;
+with slv_opcode select regdst <= '0' when x"23",
+                    '0' when x"0f",
+                    '0' when x"08",
+                    '1' when others;
 
 end architecture behavioral;

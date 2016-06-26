@@ -18,85 +18,126 @@ n@_opt
 OL;O;10.4;61
 R0
 Edecoder
-Z1 w1464615116
+Z1 w1466947222
 Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-R0
-Z5 8decoder.vhd
-Z6 Fdecoder.vhd
+Z5 d/media/phil/raid-Dokumente/uni/master/3_SS16/CPU/Ubungen/cpu_entwurf/decoder
+Z6 8decoder.vhd
+Z7 Fdecoder.vhd
 l0
 L7
 Vm=I]LnVn_iQHdLcOKH`B32
 !s100 2DFjAZgDROHW^L3B70TC61
-Z7 OL;C;10.4;61
+Z8 OV;C;10.4b;61
 31
-Z8 !s110 1464616072
+Z9 !s110 1466947964
 !i10b 1
-Z9 !s108 1464616072.477098
-Z10 !s90 -reportprogress|300|-93|-explicit|decoder.vhd|
-Z11 !s107 decoder.vhd|
-!i113 0
-Z12 o-93 -explicit
-Z13 tExplicit 1
+Z10 !s108 1466947964.000000
+Z11 !s90 -reportprogress|300|-93|-explicit|decoder.vhd|
+Z12 !s107 decoder.vhd|
+!i113 1
+Z13 o-93 -explicit
+Z14 tExplicit 1
 Abehavioral
 R2
 R3
 R4
-Z14 DEx4 work 7 decoder 0 22 m=I]LnVn_iQHdLcOKH`B32
-31
-R8
+Z15 DEx4 work 7 decoder 0 22 m=I]LnVn_iQHdLcOKH`B32
 l29
 L22
-VYlfBNfIA0C@bM?=X8O2nB3
-!s100 ViChZ9keOU0?dFELd<TiW2
-R7
-!i10b 1
+V5n>[WBTR6To;W43=hFd=_0
+!s100 LSbaWc7W<=`eXdibM>W9m0
+R8
+31
 R9
+!i10b 1
 R10
 R11
-!i113 0
 R12
+!i113 1
 R13
-Etb_decoder
-Z15 w1464616063
+R14
+Edecoder3
+Z16 w1466944743
 R2
 R3
 R4
-R0
-Z16 8tb_decoder.vhd
-Z17 Ftb_decoder.vhd
+R5
+Z17 8decoder3.vhd
+Z18 Fdecoder3.vhd
+l0
+L7
+VFDf^;Ho?B4]_7ScEMZLA43
+!s100 S;]MH^;o11P@RV>nS^nfh3
+R8
+31
+R9
+!i10b 1
+R10
+Z19 !s90 -reportprogress|300|-93|-explicit|decoder3.vhd|
+Z20 !s107 decoder3.vhd|
+!i113 1
+R13
+R14
+Abehavioral
+R2
+R3
+R4
+DEx4 work 8 decoder3 0 22 FDf^;Ho?B4]_7ScEMZLA43
+l28
+L22
+V_G9ejm7n8MB>jLPj=S]A@1
+!s100 geN5l0RAEdIf1>7dETHF<1
+R8
+31
+R9
+!i10b 1
+R10
+R19
+R20
+!i113 1
+R13
+R14
+Etb_decoder
+Z21 w1466946276
+R2
+R3
+R4
+R5
+Z22 8tb_decoder.vhd
+Z23 Ftb_decoder.vhd
 l0
 L5
 V;Jz7P2gR:WH[2<7AgNMoY2
 !s100 VoRPi4fSHP9Qd::37l1D60
-R7
-31
 R8
+31
+R9
 !i10b 1
-Z18 !s108 1464616072.528013
-Z19 !s90 -reportprogress|300|-93|-explicit|tb_decoder.vhd|
-Z20 !s107 tb_decoder.vhd|
-!i113 0
-R12
+R10
+Z24 !s90 -reportprogress|300|-93|-explicit|tb_decoder.vhd|
+Z25 !s107 tb_decoder.vhd|
+!i113 1
 R13
-Atestbench
 R14
+Atestbench
+R15
 R2
 R3
 R4
-DEx4 work 10 tb_decoder 0 22 ;Jz7P2gR:WH[2<7AgNMoY2
-31
-R8
-l24
+Z26 DEx4 work 10 tb_decoder 0 22 ;Jz7P2gR:WH[2<7AgNMoY2
+l26
 L8
-Vif10hR6LXT[777aO?ISH23
-!s100 KL=Tkb2bH92h]Pbc87N_Y0
-R7
+Z27 V6^:=>A5H7CjncU]0Vhjzl1
+Z28 !s100 Ha^oI0;?JM5V89KP723FC1
+R8
+31
+R9
 !i10b 1
-R18
-R19
-R20
-!i113 0
-R12
+R10
+R24
+R25
+!i113 1
 R13
+R14
