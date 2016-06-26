@@ -21,15 +21,26 @@ signal slv_lt : std_logic;
 
 begin
 
-with opcode select slv_o <= 
-	(a and b) when "0000",
-	(a or  b) when "0001",
-	(std_logic_vector(signed(a) + signed(b))) when "0010",
-	(b(31 downto 16) & x"0000") when "0100",
-	(a xor b) when "0101",
-	(std_logic_vector(signed(a) - signed(b))) when "0110",
-	(a nor b) when "1100",
-	(others => '0')  when others;
+process(opcode)
+begin
+    case(opcode) is
+    when "0000" => slv_o <= (a and b);
+    when "0001" => slv_o <= (a or  b);
+    when "0010" => slv_o <= std_logic_vector(signed(a) + signed(b));
+    when "0100" => slv_o <= b(15 downto 0) & x"0000";
+    when "0101" => slv_o <= a xor b;
+    when "0110" => slv_o <= std_logic_vector(signed(a) - signed(b));
+    when "1100" => slv_o <= a nor b;
+    when "0111" =>
+        if signed(a) < signed(b) then
+            slv_o <= std_logic_vector(to_signed(1, 32));
+        else 
+            slv_o <= (others => '0');
+        end if;
+    when others => null;
+    end case;
+end process;
+
 
 lessthan <= slv_lt;
 o <= slv_o;

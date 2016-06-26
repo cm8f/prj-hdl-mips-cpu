@@ -1,22 +1,7 @@
-# //  Questa Sim-64
-# //  Version 10.4 linux_x86_64 Dec  2 2014
-# //
-# //  Copyright 1991-2014 Mentor Graphics Corporation
-# //  All Rights Reserved.
-# //
-# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
-# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
-# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
-# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
-# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
-# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
-# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
-# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
-# //
 # do do_sim.tcl
 # ** Warning: (vlib-34) Library already exists at "work".
-# QuestaSim-64 vcom 10.4 Compiler 2014.12 Dec  2 2014
-# Start time: 15:01:23 on May 09,2016
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:19:38 on Jun 21,2016
 # vcom -reportprogress 300 -93 alu.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -24,18 +9,23 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity alu
 # -- Compiling architecture behavioral of alu
-# ** Error: alu.vhd(46): near "end": (vcom-1576) expecting ';'.
-# End time: 15:01:23 on May 09,2016, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# ** Error: /opt/Mentor/questasim/linux_x86_64/vcom failed.
+# ** Error: alu.vhd(30): (vcom-1136) Unknown identifier "donto".
+# ** Error: alu.vhd(30): near "0": (vcom-1576) expecting ')'.
+# ** Warning: alu.vhd(47): (vcom-1563) Choice in selected signal assignment must be locally static.
+# ** Error: alu.vhd(26): (vcom-1339) Case statement choices cover only 8 out of 6561 cases.
+# ** Warning: alu.vhd(47): (vcom-1322) Selected waveforms choice (type conversion (to ieee.std_logic_1164.STD_LOGIC_VECTOR)) cannot be checked for uniqueness.
+# ** Error: alu.vhd(60): VHDL Compiler exiting
+# End time: 15:19:38 on Jun 21,2016, Elapsed time: 0:00:00
+# Errors: 4, Warnings: 2
+# ** Error: /opt/Altera/15.1/modelsim_ase/linuxaloem/vcom failed.
 # Error in macro ./do_sim.tcl line 3
-# /opt/Mentor/questasim/linux_x86_64/vcom failed.
+# /opt/Altera/15.1/modelsim_ase/linuxaloem/vcom failed.
 #     while executing
 # "vcom -93 alu.vhd"
 do do_sim.tcl
 # ** Warning: (vlib-34) Library already exists at "work".
-# QuestaSim-64 vcom 10.4 Compiler 2014.12 Dec  2 2014
-# Start time: 15:01:51 on May 09,2016
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:20:04 on Jun 21,2016
 # vcom -reportprogress 300 -93 alu.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -43,37 +33,21 @@ do do_sim.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity alu
 # -- Compiling architecture behavioral of alu
-# End time: 15:01:51 on May 09,2016, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vcom 10.4 Compiler 2014.12 Dec  2 2014
-# Start time: 15:01:51 on May 09,2016
-# vcom -reportprogress 300 -93 tb_alu.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity tb_alu
-# -- Compiling architecture testbench of tb_alu
-# -- Loading entity alu
-# End time: 15:01:52 on May 09,2016, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vsim -do "do_sim.tcl" 
-# Start time: 15:01:52 on May 09,2016
-# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
-# Loading std.standard
-# Refreshing /home/yn38iluz/Documents/alu/work.tb_alu(testbench)
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.tb_alu(testbench)
-# Refreshing /home/yn38iluz/Documents/alu/work.alu(behavioral)
-# Loading work.alu(behavioral)
-# ** Error: opcode 0000 (and) failded
-#    Time: 10 ns  Iteration: 0  Instance: /tb_alu
+# ** Warning: alu.vhd(47): (vcom-1563) Choice in selected signal assignment must be locally static.
+# ** Error: alu.vhd(26): (vcom-1339) Case statement choices cover only 8 out of 6561 cases.
+# ** Warning: alu.vhd(47): (vcom-1322) Selected waveforms choice (type conversion (to ieee.std_logic_1164.STD_LOGIC_VECTOR)) cannot be checked for uniqueness.
+# ** Error: alu.vhd(60): VHDL Compiler exiting
+# End time: 15:20:04 on Jun 21,2016, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 2
+# ** Error: /opt/Altera/15.1/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./do_sim.tcl line 3
+# /opt/Altera/15.1/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom -93 alu.vhd"
 do do_sim.tcl
 # ** Warning: (vlib-34) Library already exists at "work".
-# QuestaSim-64 vcom 10.4 Compiler 2014.12 Dec  2 2014
-# Start time: 15:06:01 on May 09,2016
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:20:24 on Jun 21,2016
 # vcom -reportprogress 300 -93 alu.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -81,146 +55,281 @@ do do_sim.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity alu
 # -- Compiling architecture behavioral of alu
-# End time: 15:06:01 on May 09,2016, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vcom 10.4 Compiler 2014.12 Dec  2 2014
-# Start time: 15:06:01 on May 09,2016
-# vcom -reportprogress 300 -93 tb_alu.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity tb_alu
-# -- Compiling architecture testbench of tb_alu
-# -- Loading entity alu
-# End time: 15:06:01 on May 09,2016, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim 
-# Start time: 15:06:01 on May 09,2016
-# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
-# Loading std.standard
-# Refreshing /home/yn38iluz/Documents/alu/work.tb_alu(testbench)
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.tb_alu(testbench)
-# Refreshing /home/yn38iluz/Documents/alu/work.alu(behavioral)
-# Loading work.alu(behavioral)
-# ** Error: opcode 0000 (and) failded
-#    Time: 10 ns  Iteration: 0  Instance: /tb_alu
-do do_sim.tcl
-# ** Warning: (vlib-34) Library already exists at "work".
-# QuestaSim-64 vcom 10.4 Compiler 2014.12 Dec  2 2014
-# Start time: 15:20:49 on May 09,2016
-# vcom -reportprogress 300 -93 alu.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity alu
-# -- Compiling architecture behavioral of alu
-# End time: 15:20:49 on May 09,2016, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vcom 10.4 Compiler 2014.12 Dec  2 2014
-# Start time: 15:20:49 on May 09,2016
-# vcom -reportprogress 300 -93 tb_alu.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity tb_alu
-# -- Compiling architecture testbench of tb_alu
-# -- Loading entity alu
-# End time: 15:20:49 on May 09,2016, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim 
-# Start time: 15:20:49 on May 09,2016
-# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
-# Loading std.standard
-# Refreshing /home/yn38iluz/Documents/alu/work.tb_alu(testbench)
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.tb_alu(testbench)
-# Refreshing /home/yn38iluz/Documents/alu/work.alu(behavioral)
-# Loading work.alu(behavioral)
-# ** Error: opcode 0000 (and) failded
-#    Time: 10 ns  Iteration: 0  Instance: /tb_alu
-# ** Error: opcode 0111 (slt) failed
-#    Time: 70 ns  Iteration: 0  Instance: /tb_alu
-do do_sim.tcl
-# ** Warning: (vlib-34) Library already exists at "work".
-# QuestaSim-64 vcom 10.4 Compiler 2014.12 Dec  2 2014
-# Start time: 15:22:15 on May 09,2016
-# vcom -reportprogress 300 -93 alu.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity alu
-# -- Compiling architecture behavioral of alu
-# End time: 15:22:15 on May 09,2016, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vcom 10.4 Compiler 2014.12 Dec  2 2014
-# Start time: 15:22:15 on May 09,2016
-# vcom -reportprogress 300 -93 tb_alu.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity tb_alu
-# -- Compiling architecture testbench of tb_alu
-# -- Loading entity alu
-# End time: 15:22:15 on May 09,2016, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim 
-# Start time: 15:22:15 on May 09,2016
-# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
-# Loading std.standard
-# Refreshing /home/yn38iluz/Documents/alu/work.tb_alu(testbench)
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.tb_alu(testbench)
-# Refreshing /home/yn38iluz/Documents/alu/work.alu(behavioral)
-# Loading work.alu(behavioral)
-# ** Error: opcode 0000 (and) failded
-#    Time: 10 ns  Iteration: 0  Instance: /tb_alu
-do do_sim.tcl
-# ** Warning: (vlib-34) Library already exists at "work".
-# QuestaSim-64 vcom 10.4 Compiler 2014.12 Dec  2 2014
-# Start time: 15:22:51 on May 09,2016
-# vcom -reportprogress 300 -93 alu.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity alu
-# -- Compiling architecture behavioral of alu
-# End time: 15:22:51 on May 09,2016, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vcom 10.4 Compiler 2014.12 Dec  2 2014
-# Start time: 15:22:51 on May 09,2016
-# vcom -reportprogress 300 -93 tb_alu.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity tb_alu
-# -- Compiling architecture testbench of tb_alu
-# -- Loading entity alu
-# End time: 15:22:52 on May 09,2016, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vsim 
-# Start time: 15:22:52 on May 09,2016
-# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
-# Loading std.standard
-# Refreshing /home/yn38iluz/Documents/alu/work.tb_alu(testbench)
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.tb_alu(testbench)
-# Refreshing /home/yn38iluz/Documents/alu/work.alu(behavioral)
-# Loading work.alu(behavioral)
-# End time: 15:35:03 on May 09,2016, Elapsed time: 0:12:11
+# ** Warning: alu.vhd(48): (vcom-1563) Choice in selected signal assignment must be locally static.
+# End time: 15:20:24 on Jun 21,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:20:24 on Jun 21,2016
+# vcom -reportprogress 300 -93 tb_alu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_alu
+# -- Compiling architecture testbench of tb_alu
+# -- Loading entity alu
+# End time: 15:20:24 on Jun 21,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -novopt work.tb_alu 
+# Start time: 15:20:24 on Jun 21,2016
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_alu(testbench)
+# Loading work.alu(behavioral)
+# ** Error: opcode 0100 (lui) failed
+#    Time: 70 ns  Iteration: 0  Instance: /tb_alu
+cd ..
+# Cannot change directory while a simulation is in progress.
+# Use the "quit -sim" command to unload the design first.
+ls
+# alu_alt.vhd
+# alu.vhd
+# do_sim.tcl
+# tb_alu.vhd
+# transcript
+# vsim.wlf
+# work
+# workspace
+quit -sim
+# End time: 15:22:15 on Jun 21,2016, Elapsed time: 0:01:51
+# Errors: 2, Warnings: 0
+cd ../
+ls
+# alu
+# cpu
+# daten_instruktionsspeicher
+# decoder
+# program_counter
+# register_file
+cd cpu
+ls
+# asm
+# execute.vhd
+# fetch.vhd
+# fetch.vhd.bak
+# instruction_decode.vhd
+# instruction_decode.vhd.bak
+# memory_access.vhd
+# memory_access.vhd.bak
+# modelsim
+# single_cycle_cpu.vhd
+# single_cycle_cpu.vhd.bak
+# single_cycle.vhd
+# tb_single_cycle_cpu.vhd
+# workspace
+# work_vivado
+cd modelsim
+ls
+# do_sim.tcl
+# simple_sim.tcl
+# transcript
+# vsim.wlf
+# work
+do do_sim.tcl
+# ../..
+# ../../program_counter
+# ../../register_file
+# ../../daten_instruktionsspeicher
+# ../../alu
+# ../../decoder
+# ../../cpu
+# work
+# ** Warning: (vlib-34) Library already exists at "work".
+# -93 -explicit -work work
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:22:39 on Jun 21,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../program_counter/pc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pc
+# -- Compiling architecture behavioral of pc
+# End time: 15:22:39 on Jun 21,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:22:39 on Jun 21,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../register_file/regfile.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity regfile
+# -- Compiling architecture behavioral of regfile
+# End time: 15:22:39 on Jun 21,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:22:39 on Jun 21,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../daten_instruktionsspeicher/mem_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package mem_pkg
+# End time: 15:22:39 on Jun 21,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:22:39 on Jun 21,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../daten_instruktionsspeicher/data_mem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mem_pkg
+# -- Compiling entity data_mem
+# -- Compiling architecture behavioral of data_mem
+# End time: 15:22:39 on Jun 21,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:22:39 on Jun 21,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../daten_instruktionsspeicher/instr_mem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mem_pkg
+# -- Compiling entity instr_mem
+# -- Compiling architecture behavioral of instr_mem
+# End time: 15:22:40 on Jun 21,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:22:40 on Jun 21,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../alu/alu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity alu
+# -- Compiling architecture behavioral of alu
+# ** Warning: ../../alu/alu.vhd(48): (vcom-1563) Choice in selected signal assignment must be locally static.
+# End time: 15:22:40 on Jun 21,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:22:40 on Jun 21,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../decoder/decoder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity decoder
+# -- Compiling architecture behavioral of decoder
+# End time: 15:22:40 on Jun 21,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:22:40 on Jun 21,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../cpu/fetch.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mem_pkg
+# -- Compiling entity fetch
+# -- Compiling architecture structural of fetch
+# -- Loading entity pc
+# -- Loading entity instr_mem
+# End time: 15:22:40 on Jun 21,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:22:40 on Jun 21,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../cpu/instruction_decode.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Compiling entity instruction_decode
+# -- Compiling architecture structural of instruction_decode
+# -- Loading entity regfile
+# -- Loading entity decoder
+# End time: 15:22:40 on Jun 21,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:22:40 on Jun 21,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../cpu/execute.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity execute
+# -- Compiling architecture mixed of execute
+# -- Loading entity alu
+# End time: 15:22:40 on Jun 21,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:22:40 on Jun 21,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../cpu/memory_access.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mem_pkg
+# -- Compiling entity memory_access
+# -- Compiling architecture mixed of memory_access
+# -- Loading entity data_mem
+# End time: 15:22:40 on Jun 21,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:22:40 on Jun 21,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../cpu/single_cycle_cpu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity single_cycle_cpu
+# -- Compiling architecture structural of single_cycle_cpu
+# -- Loading package mem_pkg
+# -- Loading entity fetch
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Loading entity instruction_decode
+# -- Loading entity execute
+# -- Loading entity memory_access
+# End time: 15:22:40 on Jun 21,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:22:40 on Jun 21,2016
+# vcom -reportprogress 300 -93 -explicit -work work ../../cpu/tb_single_cycle_cpu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_single_cycle_cpu
+# -- Compiling architecture testbench of tb_single_cycle_cpu
+# -- Loading entity single_cycle_cpu
+# End time: 15:22:40 on Jun 21,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.tb_single_cycle_cpu 
+# Start time: 15:22:40 on Jun 21,2016
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_single_cycle_cpu(testbench)
+# Loading work.mem_pkg
+# Loading synopsys.attributes
+# Loading ieee.std_logic_misc(body)
+# Loading work.single_cycle_cpu(structural)
+# Loading work.fetch(structural)
+# Loading work.pc(behavioral)
+# Loading work.instr_mem(behavioral)
+# Loading work.instruction_decode(structural)
+# Loading work.regfile(behavioral)
+# Loading work.decoder(behavioral)
+# Loading work.execute(mixed)
+# Loading work.alu(behavioral)
+# Loading work.memory_access(mixed)
+# Loading work.data_mem(behavioral)
+# sim:/tb_single_cycle_cpu/dut
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_single_cycle_cpu/dut/i_decode/regfile_0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_single_cycle_cpu/dut/i_decode/regfile_0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /tb_single_cycle_cpu/dut/i_decode/regfile_0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /tb_single_cycle_cpu/dut/i_decode/regfile_0
+# End time: 15:23:32 on Jun 21,2016, Elapsed time: 0:00:52
+# Errors: 0, Warnings: 4
