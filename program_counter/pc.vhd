@@ -31,14 +31,14 @@ begin
 		reg_pc <= (others => '0');
 	elsif rising_edge(clk) then
 		  reg_pc <= reg_pc;
-		  --if ld = '1' then	-- load hat prioritaet
-		  --  reg_pc <= pc_in;
-		  --elsif en = '1' then
-          if en = '1' then
+		  if ld = '1' then	-- load hat prioritaet
+		    reg_pc <= pc_in;
+		  elsif en = '1' then
+--          if en = '1' then
 			reg_pc <= reg_pc_next;
-            if ld = '1' then 
-                reg_pc <= pc_in;
-            end if;
+--            if ld = '1' then 
+--               reg_pc <= pc_in;
+--            end if;
 		  end if;
 	end if;
 end process p_reg;
