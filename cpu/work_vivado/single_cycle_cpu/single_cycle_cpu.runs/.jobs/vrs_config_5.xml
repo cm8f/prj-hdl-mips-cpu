@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<Runs Version="1" Minor="0">
-	<Run Id="synth_1" LaunchDir="/media/phil/raid-Dokumente/uni/master/3_SS16/CPU/Ubungen/cpu_entwurf/cpu/work_vivado/single_cycle_cpu/single_cycle_cpu.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
-</Runs>
-
