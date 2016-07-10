@@ -21,7 +21,7 @@ signal slv_lt : std_logic;
 
 begin
 
-process(opcode)
+process(opcode, a, b)
 begin
     case(opcode) is
     when "0000" => slv_o <= (a and b);
