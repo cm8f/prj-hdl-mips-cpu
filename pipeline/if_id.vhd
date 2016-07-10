@@ -9,7 +9,7 @@ port(
     if_pc      : in std_logic_vector(31 downto 0);
     if_instr   : in std_logic_vector(31 downto 0);
     id_pc    : out std_logic_vector(31 downto 0);
-    id_intr  : out std_logic_vector(31 downto 0)
+    id_instr  : out std_logic_vector(31 downto 0)
 );
 end entity if_id;
 
@@ -19,9 +19,11 @@ begin
 
     process(clk) 
     begin
-        if en = '1' then
-            id_pc   <= if_pc;
-            id_instr<= if_instr;
+        if rising_edge(clk) then
+            if en = '1' then
+                id_pc   <= if_pc;
+                id_instr<= if_instr;
+            end if;
         end if;
     end process;
 

@@ -25,6 +25,8 @@ port(
     id_ex_alucntrl  : in  std_logic_Vector(3 downto 0);
     id_ex_regdst    : in  std_logic;
     id_me_branch    : in  std_logic;
+    id_me_jump      : in  std_logic;
+    id_me_jumpaddr  : in  std_logic_vector(31 downto 0);
     id_me_memwrite  : in  std_logic;
     id_wb_regwrite  : in  std_logic;
     id_wb_memtoreg  : in  std_logic;
@@ -32,9 +34,11 @@ port(
     ex_ex_alucntrl  : out std_logic_Vector(3 downto 0);
     ex_ex_regdst    : out std_logic;
     ex_me_branch    : out std_logic;
+    ex_me_jump      : out std_logic;
+    ex_me_jumpaddr  : out std_logic_vector(31 downto 0);
     ex_me_memwrite  : out std_logic;
     ex_wb_regwrite  : out std_logic;
-    ex_wb_memtoreg  : out std_logic;
+    ex_wb_memtoreg  : out std_logic
 );
 end entity;
 
@@ -55,9 +59,10 @@ begin
 
                 ex_ex_alusrc    <= id_ex_alusrc;
                 ex_ex_alucntrl  <= id_ex_alucntrl;
-                ex_ex_regdst    <= ex_ex_regdst;
+                ex_ex_regdst    <= id_ex_regdst;
 
                 ex_me_branch    <= id_me_branch;
+                ex_me_jump      <= id_me_jump;
                 ex_me_memwrite  <= id_me_memwrite;
 
                 ex_wb_regwrite  <= id_wb_regwrite;

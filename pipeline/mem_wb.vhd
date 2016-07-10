@@ -1,6 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
-use ieee.numer_std.all;
+use ieee.numeric_std.all;
 
 entity mem_wb is
     port(
@@ -13,13 +13,13 @@ entity mem_wb is
     -- output
     wb_rd_data  : out std_logic_vector(31 downto 0);
     wb_alures   : out std_logic_vector(31 downto 0);
-    wb_wr_reg   : out std_logic_vector(31 downto 0);
+    wb_wr_reg   : out std_logic_vector( 4 downto 0);
     -- control
     mem_wb_regwrite : in std_logic;
     mem_wb_memtoreg : in std_logic;
     
     wb_wb_regwrite  : out std_logic;
-    wb_wb_memtoreg  : out std_logic;
+    wb_wb_memtoreg  : out std_logic
 );
 end entity mem_wb;
 
