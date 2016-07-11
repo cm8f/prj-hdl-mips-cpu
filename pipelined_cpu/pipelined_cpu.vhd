@@ -94,6 +94,7 @@ signal slv_mem_rd_data      : std_logic_vector(31 downto 0);
 signal slv_mem_rd_alures    : std_logic_vector(31 downto 0);
 signal sl_mem_memwrite      : std_logic;
 signal sl_mem_memtoreg      : std_logic;
+signal sl_mem_regwrite      : std_logic;
 signal slv_mem_wr_data      : std_logic_vector(31 downto 0);
 signal slv_mem_wr_addr      : std_logic_vector(4 downto 0);
 
@@ -147,7 +148,7 @@ port map(
 	alucntrl		=> slv_decode_alucntrl,
 	memwrite		=> sl_decode_memwrite,
 	alusrc			=> sl_decode_alusrc,
-	i_regwrite      => sl_wb_regwrite,
+	i_regwrite      => sl_memwb_regwrite,
 	--wr_addr         => slv_decode_wr_addr,
 	wr_addr        => slv_wb_reg,
 	rt             => slv_decode_rt,
@@ -279,8 +280,10 @@ port map(
 	jump			=>  sl_exmem_jump,
 	memtoreg		=>  sl_exmem_memtoreg,
 	memwrite		=>  sl_exmem_memwrite,
+	regwrite        =>  sl_exmem_regwrite,
 	memwrite_out    =>  sl_mem_memwrite,
 	memtoreg_out    =>  sl_mem_memtoreg,
+	regwrite_out    =>  sl_mem_regwrite,
 	jump_out		=>  sl_mem_jump,
 	wr_addr_out     => slv_mem_wr_addr,
 	led             => led
@@ -296,8 +299,10 @@ port map(
     wb_rd_data      => slv_memwb_rd_data,
     wb_alures       => slv_memwb_alures,
     wb_wr_reg       => slv_memwb_wr_reg,
-    mem_wb_regwrite =>  sl_memwb_regwrite,
-    mem_wb_memtoreg =>  sl_memwb_memtoreg   
+    mem_wb_regwrite => sl_mem_regwrite,
+    mem_wb_memtoreg => sl_mem_memtoreg,
+    wb_wb_regwrite  => sl_memwb_regwrite,
+    wb_wb_memtoreg  => sl_memwb_memtoreg 
 );
 
 i_wb: entity work.write_back

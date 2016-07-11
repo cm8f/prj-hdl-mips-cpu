@@ -29,9 +29,11 @@ entity memory_access is
 		jump		  : in  std_logic;
 		memtoreg	  : in  std_logic;
 		memwrite	  : in  std_logic;
+		regwrite      : in  std_logic;
 		
 		memwrite_out  : out std_logic;
 		memtoreg_out  : out std_logic;
+		regwrite_out  : out std_logic;
 		jump_out	  : out std_logic;
 		wr_addr_out   : out std_logic_vector(4 downto 0)
 	);
@@ -49,7 +51,7 @@ wr_addr_out <= wr_addr;
 
 memwrite_out    <= memwrite;
 memtoreg_out    <= memtoreg;
-
+regwrite_out    <= regwrite;
 
 rd_alures <= alu_res;
 
