@@ -22,7 +22,7 @@ signal slv_decode_pc					: std_logic_vector(31 downto 0);
 signal slv_decode_rd_data0			: std_logic_vector(31 downto 0);
 signal slv_decode_rd_data1			: std_logic_vector(31 downto 0);
 signal slv_decode_sign_extend		: std_logic_vector(31 downto 0);
-signal slv_decode_wr_data			: std_logic_vector(31 downto 0);
+--signal slv_decode_wr_data			: std_logic_vector(31 downto 0);
 signal sl_decode_branch				: std_logic;
 signal sl_decode_jump				: std_logic;
 signal sl_decode_memtoreg			: std_logic;
@@ -34,6 +34,7 @@ signal slv_decode_jumpaddr          : std_logic_vector(31 downto 0);
 signal slv_decode_wr_addr           : std_logic_vector(4 downto 0);
 signal slv_decode_rt                : std_logic_vector(4 downto 0);
 signal slv_decode_rd                : std_logic_vector(4 downto 0);
+signal slv_decode_rs                : std_logic_vector(4 downto 0);
 signal sl_decode_regdst             : std_logic;
 signal sl_decode_regwrite           : std_logic;
 
@@ -62,6 +63,7 @@ signal slv_idex_rd_data1    : std_logic_vector(31 downto 0);
 signal slv_idex_signext     : std_logic_vector(31 downto 0);
 signal slv_idex_rt          : std_logic_vector(4 downto 0);
 signal slv_idex_rd          : std_logic_vector(4 downto 0);
+signal slv_idex_rs          : std_logic_vector(4 downto 0);
 signal sl_idex_alusrc       : std_logic;
 signal slv_idex_alucntrl    : std_logic_Vector(3 downto 0);
 signal sl_idex_regdst       : std_logic;
@@ -70,7 +72,7 @@ signal sl_idex_memwrite     : std_logic;
 signal sl_idex_regwrite     : std_logic;
 signal sl_idex_memtoreg     : std_logic;
 signal sl_idex_jump         : std_logic;
-signal slv_idex_jumpaddr     : std_logic_vector(31 downto 0);
+signal slv_idex_jumpaddr    : std_logic_vector(31 downto 0);
 
 signal slv_exmem_pc         : std_logic_vector(31 downto 0);
 signal slv_exmem_pc_calc    : std_logic_vector(31 downto 0);
@@ -103,7 +105,6 @@ signal slv_memwb_alures     : std_logic_vector(31 downto 0);
 signal slv_memwb_wr_reg     : std_logic_vector(4 downto 0);
 signal sl_memwb_regwrite    : std_logic;
 signal sl_memwb_memtoreg    : std_logic;
-
 
 begin
 
@@ -153,6 +154,7 @@ port map(
 	wr_addr        => slv_wb_reg,
 	rt             => slv_decode_rt,
 	rd             => slv_decode_rd,
+	rs             => slv_decode_rs,
 	regdst         => sl_decode_regdst,
 	regwrite       => sl_decode_regwrite
 );
@@ -165,15 +167,17 @@ port map(
     id_rd_data0     => slv_decode_rd_data0,
     id_rd_data1     => slv_decode_rd_data1,
     id_signext      => slv_decode_sign_extend,
-    id_instr_20     => slv_decode_rt,
-    id_instr_15     => slv_decode_rd,
+    id_rt           => slv_decode_rt,
+    id_rd           => slv_decode_rd,
+    id_rs           => slv_decode_rs,
     
     ex_pc           => slv_idex_pc,
     ex_rd_data0     => slv_idex_rd_data0,
     ex_rd_data1     => slv_idex_rd_data1,
     ex_signext      => slv_idex_signext,
-    ex_instr_20     => slv_idex_rt,
-    ex_instr_15     => slv_idex_rd,
+    ex_rt           => slv_idex_rt,
+    ex_rd           => slv_idex_rd,
+    ex_rs           => slv_idex_rs,
     
     id_ex_alusrc    => sl_decode_alusrc,
     id_ex_alucntrl  => slv_decode_alucntrl,
@@ -209,6 +213,7 @@ port map(
 	wr_data			=> slv_execute_wr_data,
 	wr_addr         => slv_execute_wr_addr,
 	rt              => slv_idex_rt,
+	rs              => slv_idex_rs,
 	rd              => slv_idex_rd,
 	zero			=> sl_execute_zero,
 	lt				=> sl_execute_lt,
@@ -225,7 +230,14 @@ port map(
 	jump			=> sl_execute_jump,
 	memtoreg		=> sl_execute_memtoreg,
 	memwrite        => sl_execute_memwrite,
-	regwrite        => sl_execute_regwrite
+	regwrite        => sl_execute_regwrite,
+	-- forwarding
+	memwb_rd_data  => slv_wb_wr_data,
+	memwb_rd       => slv_memwb_wr_reg,
+	memwb_regwr    => sl_memwb_regwrite,
+	exmem_rd_data  => slv_exmem_wr_data,
+	exmem_rd       => slv_exmem_wr_addr,
+	exmem_regwr    => sl_exmem_regwrite
 );
 
 i_exmem: entity work.ex_mem
@@ -315,6 +327,6 @@ port map(
     wr_data         => slv_wb_wr_data
 );
 
-dataout <= slv_decode_wr_data;
+dataout <= slv_wb_wr_data;
 
 end architecture structural;

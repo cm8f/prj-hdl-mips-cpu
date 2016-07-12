@@ -17,6 +17,7 @@ entity instruction_decode is
 		wr_data     : in  std_logic_vector(31 downto 0);
         jump_addr   : out std_logic_vector(31 downto 0);
         rt          : out std_logic_vector( 4 downto 0);
+        rs          : out std_logic_vector( 4 downto 0);
         rd          : out std_logic_vector( 4 downto 0);
         i_regwrite  : in  std_logic;
 		-- control
@@ -58,6 +59,7 @@ regwrite <= sl_regwrite;
 regdst <= sl_regdst;
 rt <= instruction(20 downto 16);
 rd <= instruction(15 downto 11);
+rs <= instruction(25 downto 21);
 
 --with sl_regdst select slv_wr_addr <= 
 --						instruction(20 downto 16) when '0',
