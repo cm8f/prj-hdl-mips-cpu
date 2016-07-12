@@ -26,9 +26,17 @@ entity instruction_decode is
 		memtoreg	: out std_logic;
 		alucntrl	: out std_logic_vector(3 downto 0);
 		memwrite	: out std_logic;
+		memread     : out std_logic;
 		alusrc		: out std_logic;
 		regdst      : out std_logic;
-		regwrite    : out std_logic
+		regwrite    : out std_logic;
+		-- hazard detection
+		idex_memread  : in  std_logic;
+		idex_rt       : in  std_logic_vector(4 downto 0);
+		ifid_rs       : in  std_logic_vector(4 downto 0);
+		ifid_rt       : in  std_logic_vector(4 downto 0);
+		pcwrite       : out std_logic;
+		ifidwrite     : out std_logic
 	);
 end entity instruction_decode;
 
@@ -38,13 +46,41 @@ signal slv_rd_addr0  : std_logic_vector(4 downto 0);
 signal slv_rd_addr1  : std_logic_vector(4 downto 0);
 signal slv_wr_addr   : std_logic_vector(4 downto 0);
 
-signal sl_regwrite  	: std_logic;
+signal sl_memread       : std_logic;
+signal sl_branch        : std_logic;
+signal sl_jump          : std_logic;
+signal sl_memtoreg      : std_logic;
+signal slv_alucntrl     : std_logic_vector(3 downto 0);
+signal sl_memwrite      : std_logic;
+signal sl_alusrc        : std_logic;
 signal sl_regdst		: std_logic;
+signal sl_regwrite  	: std_logic;
 
 signal slv_opcode 	: std_logic_vector(5 downto 0);
 signal slv_func		: std_logic_vector(5 downto 0);
 
+-- hazard
+signal sl_control_muxsel : std_logic;
+
+signal slv_concat_cntrl : std_logic_vector(11 downto 0);
+
 begin 
+
+-- hazard
+memread     <= slv_concat_cntrl(11);
+branch      <= slv_concat_cntrl(10);
+jump        <= slv_concat_cntrl(9);
+memtoreg    <= slv_concat_cntrl(8);
+alucntrl    <= slv_concat_cntrl(7 downto 4);
+memwrite    <= slv_concat_cntrl(3);
+alusrc      <= slv_concat_cntrl(2);
+regdst      <= slv_concat_cntrl(1);
+regwrite    <= slv_concat_cntrl(0);
+
+with sl_control_muxsel select slv_concat_cntrl <= (others => '0') when '0',
+    (sl_memread & sl_branch & sl_jump & sl_memtoreg & slv_alucntrl & sl_memwrite & 
+    sl_alusrc & sl_regdst & sl_regwrite) when others;
+                                
 
 pc_out <= pc_in;
 
@@ -83,16 +119,28 @@ slv_func   <= instruction( 5 downto  0);
 
 decode_0: entity work.decoder
 	port map(
-		opcode => slv_opcode,
-		func => slv_func,
-		regdst => sl_regdst, 
-		jump => jump,
-		branch => branch,
-		memtoreg => memtoreg,
-		alucntrl => alucntrl,
-		memwrite => memwrite,
-		alusrc => alusrc,
-		regwrite => sl_regwrite
+		opcode    => slv_opcode,
+		func      => slv_func,
+		regdst    => sl_regdst, 
+		jump      => sl_jump,
+		branch    => sl_branch,
+		memtoreg  => sl_memtoreg,
+		alucntrl  => slv_alucntrl,
+		memwrite  => sl_memwrite,
+		memread   => sl_memread,
+		alusrc    => sl_alusrc,
+		regwrite  => sl_regwrite
 	);
+
+hazard_0: entity work.hazard_detection
+    port map(
+        idex_memread    => idex_memread,
+        idex_rt         => idex_rt,
+        ifid_rs         => ifid_rs,
+        ifid_rt         => ifid_rt,
+        pcwrite         => pcwrite,
+        ifidwrite       => ifidwrite,
+        controlmuxsel   => sl_control_muxsel
+    );
 
 end architecture structural;

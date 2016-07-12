@@ -34,6 +34,7 @@ port(
     id_me_jump      : in  std_logic;
     id_me_jumpaddr  : in  std_logic_vector(31 downto 0);
     id_me_memwrite  : in  std_logic;
+    id_me_memread   : in  std_logic;
     id_wb_regwrite  : in  std_logic;
     id_wb_memtoreg  : in  std_logic;
     ex_ex_alusrc    : out std_logic;
@@ -43,6 +44,7 @@ port(
     ex_me_jump      : out std_logic;
     ex_me_jumpaddr  : out std_logic_vector(31 downto 0);
     ex_me_memwrite  : out std_logic;
+    ex_me_memread   : out std_logic;
     ex_wb_regwrite  : out std_logic;
     ex_wb_memtoreg  : out std_logic
 );
@@ -74,6 +76,7 @@ begin
                 ex_me_jump      <= id_me_jump;
                 ex_me_jumpaddr  <= id_me_jumpaddr;
                 ex_me_memwrite  <= id_me_memwrite;
+                ex_me_memread   <= id_me_memread;
 
                 ex_wb_regwrite  <= id_wb_regwrite;
                 ex_wb_memtoreg  <= id_wb_memtoreg;

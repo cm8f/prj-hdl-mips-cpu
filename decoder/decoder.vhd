@@ -14,6 +14,7 @@ port(
 	MemtoReg	: out std_logic; -- v
 	ALUCntrl	: out std_logic_vector(3 downto 0); -- v
 	MemWrite	: out std_logic; -- v
+	MemRead     : out std_logic;
 	ALUSrc		: out std_logic; -- v
 	RegWrite	: out std_logic	-- v
 );
@@ -102,6 +103,9 @@ end process alu_decode;
 --with slv_opcode select Jump <= 		'1' when x"02",
 --									'0' when others;
 
+
+with slv_opcode select memread <= '1' when x"23",
+                        '0' when others;
 
 with slv_opcode select jump <= '1' when x"02",
                    '0' when others;

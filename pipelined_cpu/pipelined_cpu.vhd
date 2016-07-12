@@ -28,6 +28,7 @@ signal sl_decode_jump				: std_logic;
 signal sl_decode_memtoreg			: std_logic;
 signal slv_decode_alucntrl			: std_logic_vector(3 downto 0);
 signal sl_decode_memwrite			: std_logic;
+signal sl_decode_memread            : std_logic;
 signal sl_decode_alusrc				: std_logic;
 signal slv_decode_jumpaddr          : std_logic_vector(31 downto 0);
 --
@@ -37,6 +38,8 @@ signal slv_decode_rd                : std_logic_vector(4 downto 0);
 signal slv_decode_rs                : std_logic_vector(4 downto 0);
 signal sl_decode_regdst             : std_logic;
 signal sl_decode_regwrite           : std_logic;
+signal sl_decode_ifidwrite          : std_logic;
+
 
 signal slv_execute_pc			: std_logic_vector(31 downto 0);
 signal slv_execute_pc_calc		: std_logic_vector(31 downto 0);
@@ -56,6 +59,8 @@ signal sl_mem_jump : std_logic;
 
 signal slv_ifid_pc          : std_logic_vector(31 downto 0);
 signal slv_ifid_instruction : std_logic_vector(31 downto 0);
+signal slv_ifid_rt          : std_logic_vector(4 downto 0);
+signal slv_ifid_rs          : std_logic_vector(4 downto 0);
 
 signal slv_idex_pc          : std_logic_vector(31 downto 0);
 signal slv_idex_rd_data0    : std_logic_vector(31 downto 0);
@@ -69,6 +74,7 @@ signal slv_idex_alucntrl    : std_logic_Vector(3 downto 0);
 signal sl_idex_regdst       : std_logic;
 signal sl_idex_branch       : std_logic;
 signal sl_idex_memwrite     : std_logic;
+signal sl_idex_memread      : std_logic;
 signal sl_idex_regwrite     : std_logic;
 signal sl_idex_memtoreg     : std_logic;
 signal sl_idex_jump         : std_logic;
@@ -106,12 +112,16 @@ signal slv_memwb_wr_reg     : std_logic_vector(4 downto 0);
 signal sl_memwb_regwrite    : std_logic;
 signal sl_memwb_memtoreg    : std_logic;
 
+signal sl_decode_pcwrite    : std_logic;
+signal sl_ifidwrite         : std_logic;
+
 begin
 
 i_fetch: entity work.fetch
 port map(
 	clk 			=> clk,
-	reset 		=> reset,
+	en              => sl_decode_pcwrite,
+	reset 		    => reset,
 	jump 			=> sl_load,
 	pc_next 		=> slv_fetch_pc_loadvalue,
 	pc				=> slv_fetch_pc,
@@ -121,33 +131,38 @@ port map(
 i_if_id: entity work.if_id
 port map(
     clk         => clk,
-    en          => '1',
+    en          => sl_ifidwrite,
     if_pc       => slv_fetch_pc,
     if_instr    => slv_fetch_instruction,
     id_pc       => slv_ifid_pc,
     id_instr    => slv_ifid_instruction
     );
+    
+slv_ifid_rt <= slv_ifid_instruction(20 downto 16);
+slv_ifid_rs <= slv_ifid_instruction(25 downto 21);
 
 sl_load <= sl_mem_jump or sl_execute_branch;
 
+
 i_decode: entity work.instruction_decode
 port map(
-	clk 				=> clk, 
+	clk 			=> clk, 
 	reset 			=> reset,
 	pc_in 			=> slv_ifid_pc,
 	pc_out 			=> slv_decode_pc,
     jump_addr       => slv_decode_jumpaddr,
-	instruction    => slv_ifid_instruction,
-	rd_data0       => slv_decode_rd_data0,
-	rd_data1       => slv_decode_rd_data1,
-	sign_extend    => slv_decode_sign_extend,
+	instruction     => slv_ifid_instruction,
+	rd_data0        => slv_decode_rd_data0,
+	rd_data1        => slv_decode_rd_data1,
+	sign_extend     => slv_decode_sign_extend,
 	--wr_data			=> slv_decode_wr_data, 
-	wr_data        => slv_wb_wr_data,
-	branch         => sl_decode_branch,
+	wr_data         => slv_wb_wr_data,
+	branch          => sl_decode_branch,
 	jump			=> sl_decode_jump,
 	memtoreg		=> sl_decode_memtoreg,
 	alucntrl		=> slv_decode_alucntrl,
 	memwrite		=> sl_decode_memwrite,
+	memread         => sl_decode_memread,
 	alusrc			=> sl_decode_alusrc,
 	i_regwrite      => sl_memwb_regwrite,
 	--wr_addr         => slv_decode_wr_addr,
@@ -156,7 +171,14 @@ port map(
 	rd             => slv_decode_rd,
 	rs             => slv_decode_rs,
 	regdst         => sl_decode_regdst,
-	regwrite       => sl_decode_regwrite
+	regwrite       => sl_decode_regwrite,
+	-- hazard detection
+	idex_memread   => sl_idex_memread,
+	idex_rt        => slv_idex_rt,
+	ifid_rt        => slv_ifid_rt,
+	ifid_rs        => slv_ifid_rs,
+	pcwrite        => sl_decode_pcwrite,
+	ifidwrite      => sl_decode_ifidwrite
 );
 
 i_idex: entity work.id_ex
@@ -184,6 +206,7 @@ port map(
     id_ex_regdst    => sl_decode_regdst,
     id_me_branch    => sl_decode_branch,
     id_me_memwrite  => sl_decode_memwrite,
+    id_me_memread   => sl_decode_memread,
     id_me_jump      => sl_decode_jump,
     id_me_jumpaddr  => slv_decode_jumpaddr,
     id_wb_regwrite  => sl_decode_regwrite,
@@ -194,6 +217,7 @@ port map(
     ex_ex_regdst    => sl_idex_regdst,
     ex_me_branch    => sl_idex_branch,
     ex_me_memwrite  => sl_idex_memwrite,
+    ex_me_memread   => sl_idex_memread,
     ex_me_jump      => sl_idex_jump,
     ex_me_jumpaddr  => slv_idex_jumpaddr,
     ex_wb_regwrite  => sl_idex_regwrite,
