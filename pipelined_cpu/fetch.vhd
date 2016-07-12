@@ -7,6 +7,7 @@ use work.mem_pkg.all;
 entity fetch is
     port(
         clk         : in  std_logic;
+        en          : in  std_logic;
         reset       : in  std_logic;
         jump        : in  std_logic;
         pc_next     : in  std_logic_vector(31 downto 0);
@@ -29,7 +30,7 @@ pc_0 : entity work.pc
 	port map (
 		clk 	  => clk,
 		reset 	  => reset,
-		en	      => c_en,
+		en	      => en,
 		pc_out	  => slv_pc,
 		ld        => jump,
 		pc_in     => pc_next
