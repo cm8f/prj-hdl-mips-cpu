@@ -74,6 +74,20 @@ package mem_pkg is
         x"00000000",
         others => (others => '0')
     );
+    
+    constant reg_incr4: rom_t := ( 
+        x"20080000",    -- addi $8,  $0,  0x00000000
+        x"20090001",    -- addi $9,  $0,  0x00000001
+        x"200a000a",    -- addi $10, $0,  0x0000000a
+        x"200b0000",    -- addi $11, $0,  0x00000000
+        x"08100007",    -- j 0x0040001c
+        x"01094020",    -- add  $8,  $8,  $9
+        x"216b0001",    -- addi $11, $11, 0x00000001
+        x"014bc82a",    -- slt  $25, $10, $11
+        x"20010001",    -- addi $1,  $0,  0x00000001
+        x"1039fffb",    -- beq  $1,  $25, 0xfffffffb
+        others => (others => '0')
+    );
 
-    constant c_instr : rom_t := reg_incr3;
+    constant c_instr : rom_t := reg_incr4;
 end package;

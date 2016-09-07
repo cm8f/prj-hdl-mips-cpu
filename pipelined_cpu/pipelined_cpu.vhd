@@ -113,7 +113,7 @@ signal sl_memwb_regwrite    : std_logic;
 signal sl_memwb_memtoreg    : std_logic;
 
 signal sl_decode_pcwrite    : std_logic;
-signal sl_ifidwrite         : std_logic;
+signal sl_ifid_write         : std_logic;
 
 begin
 
@@ -131,7 +131,7 @@ port map(
 i_if_id: entity work.if_id
 port map(
     clk         => clk,
-    en          => sl_ifidwrite,
+    en          => sl_ifid_write,
     if_pc       => slv_fetch_pc,
     if_instr    => slv_fetch_instruction,
     id_pc       => slv_ifid_pc,
@@ -177,8 +177,9 @@ port map(
 	idex_rt        => slv_idex_rt,
 	ifid_rt        => slv_ifid_rt,
 	ifid_rs        => slv_ifid_rs,
-	pcwrite        => sl_decode_pcwrite,
-	ifidwrite      => sl_decode_ifidwrite
+	ifidwrite     => sl_ifid_write,
+	pcwrite        => sl_decode_pcwrite
+	--ifidwrite      => sl_decode_ifidwrite
 );
 
 i_idex: entity work.id_ex

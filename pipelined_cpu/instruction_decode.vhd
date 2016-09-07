@@ -77,7 +77,7 @@ alusrc      <= slv_concat_cntrl(2);
 regdst      <= slv_concat_cntrl(1);
 regwrite    <= slv_concat_cntrl(0);
 
-with sl_control_muxsel select slv_concat_cntrl <= (others => '0') when '0',
+with sl_control_muxsel select slv_concat_cntrl <= (others => '0') when '1',
     (sl_memread & sl_branch & sl_jump & sl_memtoreg & slv_alucntrl & sl_memwrite & 
     sl_alusrc & sl_regdst & sl_regwrite) when others;
                                 
@@ -91,8 +91,8 @@ slv_rd_addr1 <= instruction(20 downto 16);
 
 jump_addr <= pc_in(31 downto 28) & instruction(25 downto 0)& "00";
 
-regwrite <= sl_regwrite;
-regdst <= sl_regdst;
+--regwrite <= sl_regwrite;
+--regdst <= sl_regdst;
 rt <= instruction(20 downto 16);
 rd <= instruction(15 downto 11);
 rs <= instruction(25 downto 21);

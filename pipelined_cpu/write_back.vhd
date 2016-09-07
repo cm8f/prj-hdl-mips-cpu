@@ -18,7 +18,7 @@ begin
 
 addr_out <= addr_in;
 
-with memtoreg select wr_data <= rd_data when '0',
+with memtoreg select wr_data <= rd_data when '1',
                                 alures when others;
 
 end architecture behavioral;
